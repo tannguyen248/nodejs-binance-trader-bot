@@ -1,0 +1,671 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"des",
+				"decreaseDays"
+			],
+			[
+				"ins",
+				"increaseDays"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"calle",
+				"calledOnce"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"is",
+				"isSeeingFeaturedModels"
+			],
+			[
+				"show",
+				"showedVehicles"
+			],
+			[
+				"trad",
+				"tradeUpSponsoredVehicleList"
+			],
+			[
+				"ad",
+				"adDetails"
+			],
+			[
+				"getE",
+				"getElementById"
+			],
+			[
+				"get",
+				"getElementsByClassName"
+			],
+			[
+				"tr",
+				"trigger"
+			],
+			[
+				"call",
+				"calledOnce"
+			],
+			[
+				"simila",
+				"similarVehicleSponsorship"
+			],
+			[
+				"que",
+				"querySelectorAll"
+			],
+			[
+				"vehic",
+				"vehicle"
+			],
+			[
+				"remo",
+				"removeChild"
+			],
+			[
+				"ve",
+				"vehicle"
+			],
+			[
+				"vehi",
+				"vehicles"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"se",
+				"setData"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"getEl",
+				"getElementsByClassName"
+			],
+			[
+				"add",
+				"addToTrace"
+			],
+			[
+				"new",
+				"newRelic"
+			],
+			[
+				"send",
+				"sendToNewRelic"
+			],
+			[
+				"autoPlay",
+				"autoplayMuted"
+			],
+			[
+				"cta-",
+				"oem-cta-height"
+			],
+			[
+				"snow",
+				"snowfallWindow"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"color",
+				"color-white"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ichi_cloud.js",
+			"settings":
+			{
+				"buffer_size": 12425,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Projects/stuffs/node-binance-trader-master"
+	],
+	"file_history":
+	[
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Pages/Vehicle/CategoryCenter/KBB.Page.Vehicle.CategoryCenter.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Common/KBB.Page.Events.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/obj/Release/Package/PackageTmp/Styles/OOCss/partials/buyers-hub/_buyer-hub-compare.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/obj/Release/Package/PackageTmp/Styles/OOCss/partials/shared/mixins/_breakpoints.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/owners18/_owners-trade-up-module.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Utilities/jquery.viewed.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/shared/variables/_colors.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Areas/KBB.Trident.Web.Areas.Vehicle/Scripts/Modules/Ads/KBB.Ads.SimilarVehicleSponsorship.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/tests/modules/ads/KBB.Ads.SimilarVehicleSponsorship.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/js/kbb/KBB.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Configuration/Web/BestResaleValueAwards/Ads.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/js/kbb.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Areas/KBB.Trident.Web.Areas.Vehicle/Scripts/Modules/Ads/KBB.Ads.BudgetCalculator.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/ads/_monthly-budget-calculator.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/mmymm/components/_similar-vehicles-sponsorship.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/js/ads.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Modules/Ads/KBB.Ads.SimilarVehicleSponsorship.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/tests/files.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/obj/Release/Package/PackageTmp/tests/Pages/Vehicle/Path/PriceType/KBB.Page.Path.ConditionQuiz.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Configuration/Vehicle/Ymm/Index/Default/Ads.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Configuration/Vehicle/Ymm/Index/Default/Omniture.SimilarVehicle.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/obj/Release/Package/PackageTmp/Scripts/Pages/Vehicle/MakeModel/KBB.Page.MakeModel.SimilarVehicles.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Modules/KBB.SimilarVehicles.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Configuration/Vehicle/Path/Common/CpoAwareness.Omniture.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Pages/Vehicle/MakeModel/KBB.Page.MakeModel.SimilarVehicles.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/obj/Release/Package/PackageTmp/Styles/OOCss/partials/combined-slp/_price-your-next-car.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/company/_sitemap.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/tests/Utilities/Utils.AdsApi.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/kbbtv/appletv/js/Presenter.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/kbbtv/appletv/js/applicationAds.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Utilities/Utils.AdsApi.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Pages/KBB.Page.SnowfallWindow.js",
+		"/D/Projects/Front-end/rest-apis/database.json",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Common/KBB.NewRelic.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/tests/modules/KBB.NewRelic.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/js/NewRelic/NewRelic.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Modules/Ads/KBB.Ads.Wallpaper.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/.eslintignore",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/package.json",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/tests/fixtures/TestUtils.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/pages-responsive/homepage/homepage/index/components/_hero-image.scss",
+		"/D/Projects/Front-end/HTML CSS/html5-css3/public/sass/Partials/_base.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Areas/KBB.Trident.Web.Areas.Prototype/Scripts/Brightcove/videojs.ima3.min.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Modules/Videos/KBB.Video.Brightcove.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/tests/Pages/KBB.Page.SnowfallWindow.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/modules/video/_player-main.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/modules/_kiosk.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/shared/components/_snowfall-window.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/tests/Pages/KBB.Page.SnowfallWindowVideo.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Pages/KBB.Page.SnowfallWindowVideo.js",
+		"//test70.dev.kbb.com/kbb.com/Styles/OOCss/css/vehicle/category.css",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/modules/video/_player-base.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/editorial/latestnews/_lastest-news-snowfall-window.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/classifieds/search-results/_listings-snowfall-window.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/modules/video/_player-sharing.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/pages-responsive/vehicle/category.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Pages/Editorial/LatestNews/KBB.Page.Editorial.LatestNews.SnowfallWindowModule.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/shared/variables/_font-family.scss",
+		"//test69.dev.kbb.com/kbb.com/Scripts/Pages/KBB.Page.SnowfallWindowVideo.js",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/modules/video/_player-endscreen.scss",
+		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Styles/OOCss/partials/shared/variables/_font-size.scss",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/tannguyen/Desktop/1/ad.html",
+		"/D/Projects/KBB/Ad-templates/Templates/2/Brightcove.txt",
+		"/D/Projects/KBB/Ad-templates/Templates/1/Akamai.html",
+		"/D/Projects/KBB/Ad-templates/Templates/1/Akamai.txt",
+		"/D/Projects/KBB/Ad-templates/Templates/2/ad.html",
+		"/D/Projects/KBB/Ad-templates/Templates/1/ad.html",
+		"/D/Projects/Sublime projects config/Kbbweb.sublime-project",
+		"/D/Projects/Front-end/Redux/Redux_Basic/dist/index.html",
+		"/D/Projects/Front-end/Redux/Redux_Basic/index.js"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"calculateRSI",
+			"console.log",
+			"createPairData"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ichi_cloud.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10191,
+								10191
+							]
+						],
+						"settings":
+						{
+							"SL.38.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4097.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 26.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 26.0
+	},
+	"output.exec":
+	{
+		"height": 96.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Binance_bot.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"kbb.ads.budgetcalculator",
+				"tests\\modules\\ads\\KBB.Ads.BudgetCalculator.js"
+			],
+			[
+				"owner18",
+				"Scripts\\Configuration\\Vehicle\\Hub\\Index\\Trade-In-Sell\\Ads.Owners18.js"
+			],
+			[
+				"categorycent",
+				"Scripts\\Pages\\Vehicle\\CategoryCenter\\KBB.Page.Vehicle.CategoryCenter.js"
+			],
+			[
+				"vehiclespon",
+				"Areas\\KBB.Trident.Web.Areas.Vehicle\\Scripts\\Modules\\Ads\\KBB.Ads.SimilarVehicleSponsorship.js"
+			],
+			[
+				"tradeup",
+				"Scripts\\Pages\\Vehicle\\Hub\\Index\\Owners18\\Page.TradeUpModule.js"
+			],
+			[
+				"kbb.js",
+				"js\\kbb\\KBB.js"
+			],
+			[
+				"budgetcalu",
+				"Areas\\KBB.Trident.Web.Areas.Vehicle\\Scripts\\Modules\\Ads\\KBB.Ads.BudgetCalculator.js"
+			],
+			[
+				"colors.scss",
+				"Styles\\OOCss\\partials\\shared\\variables\\_colors.scss"
+			],
+			[
+				"budgetcalculator.sc",
+				"Styles\\OOCss\\partials\\owners18\\_owners-budget-calculator.scss"
+			],
+			[
+				"budgetcalculator.scs",
+				"Styles\\OOCss\\partials\\ads\\_monthly-budget-calculator.scss"
+			],
+			[
+				"budgetcalculator.js",
+				"Areas\\KBB.Trident.Web.Areas.Vehicle\\Scripts\\Modules\\Ads\\KBB.Ads.BudgetCalculator.js"
+			],
+			[
+				"ads.js",
+				"js\\ads.js"
+			],
+			[
+				"kbb.ads.similarvehiclesponsorship",
+				"tests\\modules\\ads\\KBB.Ads.SimilarVehicleSponsorship.js"
+			],
+			[
+				"tests/files.js",
+				"tests\\files.js"
+			],
+			[
+				"default/omniture.similarvehicle.js",
+				"Scripts\\Configuration\\Vehicle\\Ymm\\Index\\Default\\Omniture.SimilarVehicle.js"
+			],
+			[
+				"ymm/index/default/ads.js",
+				"Scripts\\Configuration\\Vehicle\\Ymm\\Index\\Default\\Ads.js"
+			],
+			[
+				"configuration/vehicle/ymm/index/default/ads.js",
+				"Scripts\\Configuration\\Vehicle\\Ymm\\Index\\Default\\Ads.js"
+			],
+			[
+				"simila",
+				"Styles\\OOCss\\partials\\mmymm\\components\\_similar-vehicles-sponsorship.scss"
+			],
+			[
+				"similarvehicle",
+				"Scripts\\Modules\\KBB.SimilarVehicles.js"
+			],
+			[
+				"similarvehicles",
+				"Scripts\\Modules\\Ads\\KBB.Ads.SimilarVehicleSponsorship.js"
+			],
+			[
+				"kbb.page.makemodel.similarvehicles",
+				"Scripts\\Pages\\Vehicle\\MakeModel\\KBB.Page.MakeModel.SimilarVehicles.js"
+			],
+			[
+				"/ymm/index/default/omniture.similarvehicle.js",
+				"Scripts\\Configuration\\Vehicle\\Ymm\\Index\\Default\\Omniture.SimilarVehicle.js"
+			],
+			[
+				"cpoawareness.omniture.js",
+				"Scripts\\Configuration\\Vehicle\\Path\\Common\\CpoAwareness.Omniture.js"
+			],
+			[
+				"vehiclesponsor",
+				"Scripts\\Modules\\Ads\\KBB.Ads.SimilarVehicleSponsorship.js"
+			],
+			[
+				"similar-vehi",
+				"Styles\\OOCss\\partials\\mmymm\\components\\_similar-vehicles-sponsorship.scss"
+			],
+			[
+				"utils.adsapi.js",
+				"tests\\Utilities\\Utils.AdsApi.js"
+			],
+			[
+				"utils.ad",
+				"tests\\Utilities\\Utils.AdsApi.js"
+			],
+			[
+				"utilsap",
+				"Scripts\\Utilities\\Utils.AdsApi.js"
+			],
+			[
+				"snowfall",
+				"Scripts\\Pages\\KBB.Page.SnowfallWindow.js"
+			],
+			[
+				"files.",
+				"tests\\files.js"
+			],
+			[
+				"kbb.newrel",
+				"tests\\modules\\KBB.NewRelic.js"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"newr",
+				"js\\NewRelic\\NewRelic.js"
+			],
+			[
+				"kbb.new",
+				"Scripts\\Common\\KBB.NewRelic.js"
+			],
+			[
+				"kbb.ads.wallpaper.js",
+				"tests\\modules\\ads\\KBB.Ads.Wallpaper.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"testutils",
+				"tests\\fixtures\\TestUtils.js"
+			],
+			[
+				"kbb.newre",
+				"tests\\modules\\KBB.NewRelic.js"
+			],
+			[
+				"kbb.newrelic",
+				"Scripts\\Common\\KBB.NewRelic.js"
+			],
+			[
+				"hero-image",
+				"Styles\\OOCss\\pages-responsive\\homepage\\homepage\\index\\components\\_hero-image.scss"
+			],
+			[
+				"brightcove",
+				"Scripts\\Modules\\Videos\\KBB.Video.Brightcove.js"
+			],
+			[
+				"video/",
+				"Styles\\OOCss\\partials\\modules\\video\\_player-main.scss"
+			],
+			[
+				"kbb.page.snowfallwindow.js",
+				"tests\\Pages\\KBB.Page.SnowfallWindow.js"
+			],
+			[
+				"snowfallvideo",
+				"tests\\Pages\\KBB.Page.SnowfallWindowVideo.js"
+			],
+			[
+				"_kiosk.scss",
+				"Styles\\OOCss\\partials\\modules\\_kiosk.scss"
+			],
+			[
+				"lasted",
+				"Styles\\OOCss\\partials\\editorial\\latestnews\\_lastest-news-snowfall-window.scss"
+			],
+			[
+				"player-base",
+				"Styles\\OOCss\\partials\\modules\\video\\_player-base.scss"
+			],
+			[
+				"snowfallwindowmodule",
+				"Scripts\\Pages\\Editorial\\LatestNews\\KBB.Page.Editorial.LatestNews.SnowfallWindowModule.js"
+			],
+			[
+				"snowfallwin",
+				"Scripts\\Pages\\KBB.Page.SnowfallWindowVideo.js"
+			],
+			[
+				"kbb.page.vehicle.categorycenter.js",
+				"Scripts\\Pages\\Vehicle\\CategoryCenter\\KBB.Page.Vehicle.CategoryCenter.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 258.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
