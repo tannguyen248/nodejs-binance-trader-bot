@@ -33,8 +33,8 @@ class RSI {
             avgGain = ((prePairData.avgGain * 13) + Math.abs(diff)) / 14;
             avgLoss = (prePairData.avgLoss * 13) / 14;
         } else {
-            avgGain = ((prePairData.avgLoss * 13) + Math.abs(diff)) / 14;
-            avgLoss = (prePairData.avgGain * 13) / 14;
+            avgLoss = ((prePairData.avgLoss * 13) + Math.abs(diff)) / 14;
+            avgGain = (prePairData.avgGain * 13) / 14;
         }
 
         return { avgGain: avgGain, avgLoss: avgLoss };
@@ -59,6 +59,8 @@ class RSI {
             currentPairData.avgGain = gainLoss.avgGain;
             currentPairData.avgLoss = gainLoss.avgLoss;
         }
+
+        //console.log(tempPairData)
 
         return tempPairData.reverse();
     }

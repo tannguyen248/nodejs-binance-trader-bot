@@ -11,6 +11,7 @@ const TelegramBot = require('node-telegram-bot-api');
 // const load = require('audio-loader')
 const nodemailer = require('nodemailer')
 const rsi  = require('./indicators/rsi')(14);
+const ovb = require('./indicators/ovb');
 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -59,11 +60,6 @@ let intervals = ['1m', '3m', '5m', '15m', '30m', '1h', '2h', '4h', '6h', '8h', '
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //----ICHI CLOUD----//
-// let tenkanSenPeriod = 9;
-// let kijunSenPeriod = 26;
-// let senkouSpanBPeriod = 52;
-// let chikouSpanPeriod = 26;
-
 let tenkanSenPeriod = 20;
 let kijunSenPeriod = 60;
 let senkouSpanBPeriod = 120;
@@ -96,13 +92,6 @@ getSenkouSpanB = (symbol) => {
 }
 
 createIchimokuElements = (symbol) => {
-    // console.log(getTenkanSen(symbol));
-    // console.log(getKijunSen(symbol))
-    // console.log(getSenkouSpanA(symbol))
-    // console.log(getSenkouSpanB(symbol))
-    // console.log(tracked_pairs[symbol][0].price)
-
-
     return {
         tenkanSen: getTenkanSen(symbol), // Conversion Line
         kijunSen: getKijunSen(symbol), // Base Line
@@ -112,60 +101,27 @@ createIchimokuElements = (symbol) => {
     }
 }
 
-// shouldBuyPriceCutKijunSen = (symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chikouSpan) => {
-//     let currentPrice = tracked_pairs[symbol][0].price;
-
-//     //console.log(tracked_pairs[symbol][0])
-
-//     let chikouSpanPreviodPrice = tracked_pairs[symbol][chikouSpanPeriod - 1].price;
-
-//     //console.log(tracked_pairs[symbol][chikouSpanPeriod - 1])
-
-//     //console.log(chikouSpan, chikouSpanPreviodPrice)
-//     if (chikouSpan > chikouSpanPreviodPrice) {
-//         //console.log(currentPrice, kijunSen)
-//         if (currentPrice >= kijunSen) {
-//             //console.log(currentPrice, senkouSpanA)
-//             //console.log(currentPrice, chikouSpan)
-//             if (currentPrice >= senkouSpanA && currentPrice >= senkouSpanB) {
-//                 //console.log('buy ' + symbol)
-//                 return true;
-//             }
-//         }
-//     }
-// }
-
 
 shouldBuy = (symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chikouSpan) => {
     //console.log('shouldBuy')
     let chikouSpanPreviodPrice = tracked_pairs[symbol][chikouSpanPeriod - 1].price;
     let currentPrice = tracked_pairs[symbol][0].price;
     let calculatedRSI = rsi.calculateRSI(tracked_pairs[symbol][0]);
+    let diffTenkanAndChikou = (tenkanSen - kijunSen) * 100.0 / kijunSen;
+    let currentOVB = Math.round(tracked_pairs[symbol][0].ovb);
 
-    console.log(tracked_pairs[symbol].length)
-    console.log(tracked_pairs[symbol])
-
-    console.log('rsi', calculatedRSI);
-
-   // // console.log(chikouSpan, chikouSpanPreviodPrice)
-   //  if (chikouSpan > chikouSpanPreviodPrice) {
-   //      //console.log(tenkanSen, kijunSen)
-   //      if (tenkanSen >= kijunSen) {
-   //         // console.log(currentPrice, senkouSpanA)
-   //          //console.log(currentPrice, chikouSpan)
-   //          if (currentPrice >= senkouSpanA && currentPrice >= senkouSpanB) {
-   //              //console.log('buy ' + symbol)
-   //              return true;
-   //          }
-   //      }
-   //  }
+    var highestOVB = Math.max(...tracked_pairs[symbol].slice(0, 5).map(x => Math.round(x.ovb)));
 
     if (chikouSpan > chikouSpanPreviodPrice) {
-        if (tenkanSen >= kijunSen) {
-            //console.log('percent', ((currentPrice - kijunSen) / kijunSen) * 100);
-            if (((currentPrice - kijunSen) / kijunSen) * 100 < 4) {
-                if (calculatedRSI > 45 && calculatedRSI < 70) {
-                    return true;
+        if (tenkanSen >= kijunSen && diffTenkanAndChikou < 0.7) {
+            if (currentPrice > tenkanSen) {
+                //console.log('percent', ((currentPrice - kijunSen) / kijunSen) * 100);
+                if (((currentPrice - kijunSen) / kijunSen) * 100 < 4) {
+                    if (currentOVB === highestOVB) {
+                        if (calculatedRSI > 45 && calculatedRSI < 70) {
+                            return true;
+                        }
+                    }
                 }
             }
         }
@@ -199,10 +155,6 @@ calculateIchimoku = (symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chik
         return 'BUY';
     }
 
-    // if (shouldBuyPriceCutKijunSen(symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chikouSpan)) {
-    //     return 'BUY by Price cut KijunSen';
-    // }
-
     if (shouldSell(symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chikouSpan)) {
         return 'SELL';
     }
@@ -224,7 +176,7 @@ console.log('------------ NBT starting -------------')
 async function run() {
 
     //if (sound_alert) load('./alert.mp3').then(play);
-    await sleep(2)
+    // await sleep(2)
 
     console.log('------------------------------')
     console.log(' start get_BTC_price')
@@ -240,8 +192,11 @@ async function run() {
     console.log(' get_BTC_pairs start')
     console.log('------------------------------')
     pairs = await get_BTC_pairs()
+    //pairs.unshift('BTCUSD')
     console.log('------------------------------')
-    pairs = pairs.slice(0, 1) //for debugging purpose
+
+    //pairs = pairs.slice(0, 1) //for debugging purpose
+    //pairs = ['GASBTC'];
     console.log("Total BTC pairs: " + pairs.length)
     console.log('------------------------------')
 
@@ -324,6 +279,8 @@ getPrevMinutePrices = (pair, interval) => {
                 }
 
                 tracked_pairs[symbol] = rsi.calculatePrevGainLoss(tracked_pairs[symbol]);
+                tracked_pairs[symbol] = ovb.calculatePreOVB(tracked_pairs[symbol]);
+
                 handleIchimokuSignal(symbol);
 
                 resolve(true)
@@ -340,18 +297,13 @@ trackPrice = (pair, interval) => {
 
             if (isFinal) {
                 let data = createPairData(Date.now(), parseFloat(open), parseFloat(close), volume, buyBaseVolume, parseFloat(high), parseFloat(low));
-
-                if (!tracked_pairs[symbol]) {
-                    // for 1st element
-                    tracked_pairs[symbol] = [data];
-                } else {
-                    tracked_pairs[symbol].pop();
-                    tracked_pairs[symbol].unshift(data);
-                }
+                tracked_pairs[symbol].pop();
+                tracked_pairs[symbol].unshift(data);
 
                 let gainLoss = rsi.calculateCurrentGainLoss(tracked_pairs[symbol][1], tracked_pairs[symbol][0])
                 tracked_pairs[symbol][0].avgGain = gainLoss.avgGain;
                 tracked_pairs[symbol][0].avgLoss = gainLoss.avgLoss;
+                tracked_pairs[symbol][0].ovb = ovb.calculateOVB(tracked_pairs[symbol][1], tracked_pairs[symbol][0]);
 
                 handleIchimokuSignal(symbol);
             }
