@@ -12,6 +12,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const nodemailer = require('nodemailer')
 const rsi  = require('./indicators/rsi')(14);
 const ovb = require('./indicators/ovb');
+const support = require('./indicators/support');
+const resistence = require('./indicators/resistence');
 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -55,6 +57,7 @@ let hourly_prices = {}
 
 let tracked_pairs = []
 let tracked_pair_status = [];
+let tracked_pairs_hourly = [];
 let total_pnl = {}
 let intervals = ['1m', '3m', '5m', '15m', '30m', '1h', '2h', '4h', '6h', '8h', '12h', '1d', '3d', '1w', '1M'];
 
@@ -107,14 +110,13 @@ shouldBuy = (symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chikouSpan) 
     let chikouSpanPreviodPrice = tracked_pairs[symbol][chikouSpanPeriod - 1].price;
     let currentPrice = tracked_pairs[symbol][0].price;
     let calculatedRSI = rsi.calculateRSI(tracked_pairs[symbol][0]);
-    let diffTenkanAndChikou = (tenkanSen - kijunSen) * 100.0 / kijunSen;
+    let diffTenkanAndKijun = (tenkanSen - kijunSen) * 100.0 / kijunSen;
     let currentOVB = Math.round(tracked_pairs[symbol][0].ovb);
-
     var highestOVB = Math.max(...tracked_pairs[symbol].slice(0, 5).map(x => Math.round(x.ovb)));
 
     if (chikouSpan > chikouSpanPreviodPrice) {
-        if (tenkanSen >= kijunSen && diffTenkanAndChikou < 0.7) {
-            if (currentPrice > tenkanSen) {
+        if (tenkanSen >= kijunSen && diffTenkanAndKijun < 1) {
+            if (currentPrice > tenkanSen && currentPrice > kijunSen) {
                 //console.log('percent', ((currentPrice - kijunSen) / kijunSen) * 100);
                 if (((currentPrice - kijunSen) / kijunSen) * 100 < 4) {
                     if (currentOVB === highestOVB) {
@@ -131,8 +133,9 @@ shouldBuy = (symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chikouSpan) 
 shouldSell = (symbol, tenkanSen, kijunSen, senkouSpanA, senkouSpanB, chikouSpan) => {
     let chikouSpanPreviodPrice = tracked_pairs[symbol][chikouSpanPeriod - 1].price;
     let currentPrice = tracked_pairs[symbol][0].price;
+    let diffKijunAndTenkan = ((kijunSen - tenkanSen) * 100.0) / tenkanSen;
     if (chikouSpan < chikouSpanPreviodPrice) {
-        if (tenkanSen < kijunSen) {
+        if (tenkanSen < kijunSen && diffKijunAndTenkan > 0.8) {
             return true;
         }
     }
@@ -192,11 +195,11 @@ async function run() {
     console.log(' get_BTC_pairs start')
     console.log('------------------------------')
     pairs = await get_BTC_pairs()
-    //pairs.unshift('BTCUSD')
+    //pairs.unshift('BTCUSDT')
     console.log('------------------------------')
 
     //pairs = pairs.slice(0, 1) //for debugging purpose
-    //pairs = ['GASBTC'];
+    //pairs = ['HSRBTC'];
     console.log("Total BTC pairs: " + pairs.length)
     console.log('------------------------------')
 
@@ -205,7 +208,7 @@ async function run() {
     console.log('------------------------------')
     console.log(' run detector')
     console.log('------------------------------')
-    await get_candleSticks_for_BTC_pairs(intervals[4]);
+    await get_candleSticks_for_BTC_pairs(intervals[5], intervals[11]);
 }
 
 
@@ -235,16 +238,24 @@ get_BTC_pairs = () => {
             }
             if (data) {
                 console.log( data.symbols.length + " total pairs")
-                resolve( data.symbols.filter( pair => pair.symbol.endsWith('BTC') ).map(pair=>pair.symbol) )
+                resolve( data.symbols.filter(pair => pair.symbol.endsWith('BTC') || pair.symbol.endsWith('USDT')).map(pair=>pair.symbol) )
             }
         })
     })
 }
 
 
-get_candleSticks_for_BTC_pairs = async (interval) => {
+get_candleSticks_for_BTC_pairs = async (interval, longInterval) => {
     console.log(`Run on ${interval} chart`);
     for (var i = 0; i < pairs.length; i++) {
+        await getPrevHourPrices(pairs[i], longInterval);
+
+        await sleep(wait_time)
+
+        await trackHourlyPrice(pairs[i], longInterval);
+
+        await sleep(wait_time)
+
         await getPrevMinutePrices(pairs[i], interval);
         //await getPrevMinutePrices('GASBTC', interval);
         await sleep(wait_time)
@@ -264,7 +275,7 @@ getPrevMinutePrices = (pair, interval) => {
             }
 
             if (ticks) {
-                console.log( pair + ' got data')
+                console.log(pair + ' got ' + interval + ' data')
                 for (var i = 0; i < ticks.length; i++) {
                     let [time, open, high, low, close, volume, closeTime, assetVolume, trades, buyBaseVolume, buyAssetVolume, ignored] = ticks[i]
                     let data = createPairData(time, parseFloat(open), parseFloat(close), parseFloat(volume), parseFloat(buyBaseVolume), parseFloat(high), parseFloat(low));
@@ -278,10 +289,13 @@ getPrevMinutePrices = (pair, interval) => {
                     }
                 }
 
-                tracked_pairs[symbol] = rsi.calculatePrevGainLoss(tracked_pairs[symbol]);
-                tracked_pairs[symbol] = ovb.calculatePreOVB(tracked_pairs[symbol]);
-
-                handleIchimokuSignal(symbol);
+                if (tracked_pairs[symbol] && tracked_pairs[symbol].length >= 300) {
+                    tracked_pairs[symbol] = rsi.calculatePrevGainLoss(tracked_pairs[symbol]);
+                    tracked_pairs[symbol] = ovb.calculatePreOVB(tracked_pairs[symbol]);
+                    handleIchimokuSignal(symbol);
+                } else {
+                    console.log(pair + ' is empty on ' + interval);
+                }
 
                 resolve(true)
             }
@@ -297,15 +311,85 @@ trackPrice = (pair, interval) => {
 
             if (isFinal) {
                 let data = createPairData(Date.now(), parseFloat(open), parseFloat(close), volume, buyBaseVolume, parseFloat(high), parseFloat(low));
-                tracked_pairs[symbol].pop();
-                tracked_pairs[symbol].unshift(data);
 
-                let gainLoss = rsi.calculateCurrentGainLoss(tracked_pairs[symbol][1], tracked_pairs[symbol][0])
-                tracked_pairs[symbol][0].avgGain = gainLoss.avgGain;
-                tracked_pairs[symbol][0].avgLoss = gainLoss.avgLoss;
-                tracked_pairs[symbol][0].ovb = ovb.calculateOVB(tracked_pairs[symbol][1], tracked_pairs[symbol][0]);
+                if (tracked_pairs[symbol] && tracked_pairs[symbol].length >= 300) {
+                    tracked_pairs[symbol].pop();
+                    tracked_pairs[symbol].unshift(data);
 
-                handleIchimokuSignal(symbol);
+                    let gainLoss = rsi.calculateCurrentGainLoss(tracked_pairs[symbol][1], tracked_pairs[symbol][0])
+                    tracked_pairs[symbol][0].avgGain = gainLoss.avgGain;
+                    tracked_pairs[symbol][0].avgLoss = gainLoss.avgLoss;
+                    tracked_pairs[symbol][0].ovb = ovb.calculateOVB(tracked_pairs[symbol][1], tracked_pairs[symbol][0]);
+
+                    handleIchimokuSignal(symbol);
+                } else {
+                    //getPrevMinutePrices(pair, interval);
+                }
+            }
+
+            resolve(true);
+        });
+    })
+}
+
+getPrevHourPrices = (pair, interval) => {
+    return new Promise(resolve => {
+        binance.candlesticks(pair, interval, (error, ticks, symbol) => {
+            if (error) {
+                console.log( pair + " getPrevHourPrices ERROR " + error )
+                resolve(true)
+            }
+
+            if (ticks) {
+                console.log(pair + ' got ' + interval + ' data')
+                for (var i = 0; i < ticks.length; i++) {
+                    let [time, open, high, low, close, volume, closeTime, assetVolume, trades, buyBaseVolume, buyAssetVolume, ignored] = ticks[i]
+                    let data = createPairData(time, parseFloat(open), parseFloat(close), parseFloat(volume), parseFloat(buyBaseVolume), parseFloat(high), parseFloat(low));
+
+                    if (!tracked_pairs_hourly[symbol]) {
+                        // for 1st element
+                        tracked_pairs_hourly[symbol] = [];
+                        tracked_pairs_hourly[symbol].unshift(data);
+                    } else {
+                        tracked_pairs_hourly[symbol].unshift(data);
+                    }
+                }
+
+                if (tracked_pairs_hourly[symbol] && tracked_pairs_hourly[symbol].length > 0) {
+                    //tracked_pairs_hourly[symbol] = rsi.calculatePrevGainLoss(tracked_pairs_hourly[symbol]);
+                    //tracked_pairs_hourly[symbol] = ovb.calculatePreOVB(tracked_pairs_hourly[symbol]);
+                } else {
+                    console.log(pair + ' is empty on ' + interval);
+                }
+
+
+                resolve(true)
+            }
+        }, {limit: 300})
+    })
+}
+
+trackHourlyPrice = (pair, interval) => {
+    return new Promise(resolve => {
+        binance.websockets.candlesticks(pair, interval, (candlesticks) => {
+            let { e:eventType, E:eventTime, s:symbol, k:ticks } = candlesticks;
+            let { o:open, h:high, l:low, c:close, v:volume, n:trades, i:interval, x:isFinal, q:quoteVolume, V:buyBaseVolume, Q:quoteBuyVolume } = ticks;
+
+            if (isFinal) {
+                let data = createPairData(Date.now(), parseFloat(open), parseFloat(close), volume, buyBaseVolume, parseFloat(high), parseFloat(low));
+
+                if (tracked_pairs_hourly[symbol] && tracked_pairs_hourly[symbol].length > 0) {
+                    tracked_pairs_hourly[symbol].pop();
+                    tracked_pairs_hourly[symbol].unshift(data);
+
+                    //let gainLoss = rsi.calculateCurrentGainLoss(tracked_pairs_hourly[symbol][1], tracked_pairs_hourly[symbol][0])
+                    //tracked_pairs_hourly[symbol][0].avgGain = gainLoss.avgGain;
+                    //tracked_pairs_hourly[symbol][0].avgLoss = gainLoss.avgLoss;
+                    //tracked_pairs_hourly[symbol][0].ovb = ovb.calculateOVB(tracked_pairs_hourly[symbol][1], tracked_pairs_hourly[symbol][0]);
+                } else {
+                    getPrevHourPrices(pair, interval);
+                }
+
             }
 
             resolve(true);
@@ -317,12 +401,25 @@ trackPrice = (pair, interval) => {
 handleIchimokuSignal = (symbol) => {
     let chimokuElements = createIchimokuElements(symbol);
     var message = calculateIchimoku(symbol, chimokuElements.tenkanSen, chimokuElements.kijunSen, chimokuElements.senkouSpanA, chimokuElements.senkouSpanB, chimokuElements.chikouSpan);
+    let extraMessage = '';
 
     if (message) {
         if (tracked_pair_status[symbol] != message) {
             tracked_pair_status[symbol] = message;
             var a = new Date();
-            message = `${message} ${symbol} at ${chimokuElements.chikouSpan}-${chimokuElements.kijunSen} \n ${a.getDate()}/${a.getMonth()}/${a.getFullYear()} ${a.getHours()}:${a.getMinutes()} \n`
+
+            if (message === 'BUY' && tracked_pairs_hourly[symbol]) {
+                let supports = support.getFilteredSupports(tracked_pairs_hourly[symbol], 8, 21);
+                let resistences = resistence.getFilteredResistences(tracked_pairs_hourly[symbol], 8, 21);
+
+                extraMessage =  `TARGET (Sell BEFORE): ${resistences.slice(0, 5).join(', ')} \n` +
+                                `STOP LOSS (Sell BELOW): ${supports.slice(0, 5).join(', ')} \n`;
+            }
+
+            message = `${message} ${symbol} at ${chimokuElements.chikouSpan}-${chimokuElements.kijunSen} \n` +
+                       extraMessage +
+                      `${a.getDate()}/${a.getMonth()}/${a.getFullYear()} ${a.getHours()}:${a.getMinutes()} \n`
+
             console.log(message);
             bot.sendMessage(chatId, message);
         }
@@ -331,14 +428,14 @@ handleIchimokuSignal = (symbol) => {
 
 createPairData = (time, open, close, volume, buyBaseVolume, high, low) => {
     return {
-        time: time,
+        time,
         price: close,
-        high: high,
-        low: low,
-        volume: volume,
+        high,
+        low,
+        volume,
         buyVolume: buyBaseVolume,
-        close: close,
-        open: open
+        close,
+        open
     }
 }
 
@@ -346,4 +443,4 @@ run()
 
 const app = express()
 app.get('/', (req, res) => res.send(tracked_pairs))
-app.listen(9874, () => console.log('NBT api accessable on port 80'))
+app.listen(9784, () => console.log('NBT api accessable on port 80'))

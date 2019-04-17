@@ -55,6 +55,8 @@ let tracked_pairs = []
 let tracked_data = {}
 let total_pnl = {}
 let intervals = ['1m', '3m', '5m', '15m', '30m', '1h', '2h', '4h', '6h', '8h', '12h', '1d', '3d', '1w', '1M'];
+let interval = '30m';
+let pair_status = []
 
 console.log('------------ NBT starting -------------')
 
@@ -78,7 +80,7 @@ async function run() {
     console.log('------------------------------')
     pairs = await get_BTC_pairs()
     console.log('------------------------------')
-    pairs = pairs.slice(0, 1) //for debugging purpose
+    //pairs = pairs.slice(0, 1) //for debugging purpose
     console.log("Total BTC pairs: " + pairs.length)
     console.log('------------------------------')
 
@@ -87,7 +89,7 @@ async function run() {
     console.log('------------------------------')
     console.log(' run detector')
     console.log('------------------------------')
-    await get_candleSticks_for_BTC_pairs(intervals[0]);
+    await get_candleSticks_for_BTC_pairs(interval);
 }
 
 
@@ -146,12 +148,12 @@ getPrevMinutePrices = (pair, interval) => {
                 console.log( pair + ' got data')
                 for (var i = 0; i < ticks.length; i++) {
                     let [time, open, high, low, close, volume, closeTime, assetVolume, trades, buyBaseVolume, buyAssetVolume, ignored] = ticks[i];
-                    let pair_data = create_pair_data(tracked_pairs, symbol, close, volume, buyBaseVolume, btc_price);
+                    let pair_data = create_pair_data(tracked_pairs, symbol, close, volume, buyBaseVolume, btc_price, time);
                 }
 
                 resolve(true)
             }
-        }, {limit: 2})
+        }, {limit: 3})
     })
 }
 
@@ -159,21 +161,34 @@ trackPrice = (pair, interval) => {
     return new Promise(resolve => {
         binance.websockets.candlesticks(pair, interval, (candlesticks) => {
             let { e:eventType, E:eventTime, s:symbol, k:ticks } = candlesticks;
-            let { o:open, h:high, l:low, c:close, v:volume, n:trades, i:interval, x:isFinal, q:quoteVolume, V:buyVolume, Q:quoteBuyVolume } = ticks;
+            let { s:s, o:open, h:high, l:low, c:close, v:volume, n:trades, i:interval, x:isFinal, q:quoteVolume, V:buyVolume, Q:quoteBuyVolume } = ticks;
+
+            let currentPair = tracked_pairs.find(x => x.symbol === s);
+
+            if (currentPair) {
+                let [candlestick1, candlestick2, candlestick3] = currentPair.data;
+                let averageVolumne = (parseFloat(candlestick1.volume) + parseFloat(candlestick2.volume) + parseFloat(candlestick3.volume)) / 3;
+
+                if (volume > averageVolumne * 1.3) {
+                    let t = Date.now() - candlestick3.timestamp;
+                    let minuteT = t / 60000;
+                    let status = close > candlestick3.price ? 'pumping' : 'dumping';
+
+                    if (minuteT < 20) {
+                        if (pair_status[s] !== status) {
+                            pair_status[s] = status;
+                            var message = `[TESTING ${interval}] ${s} + is ${status}. Price:  ${candlestick3.price} | ${close}
+                                    \n Previous volume: ${candlestick3.volume} Current volume: ${volume}
+                                    \n https://www.binance.com/tradeDetail.html?symbol=${symbol.slice(0, -3)}_BTC`;
+                            console.log(message);
+                            bot.sendMessage(chatId, message);
+                        }
+                    }
+                }
+            }
 
             if (isFinal) {
                 let pair_data = create_pair_data(tracked_pairs, symbol, close, volume, buyVolume, btc_price);
-
-                var isPumping = calculate_ticks_data(pair_data.data)
-                console.log(pair_data.data);
-                console.log(`qVolume: ${quoteVolume} quoteBuyVolume: ${quoteBuyVolume}`);
-                if (isPumping) {
-                    var message = `[TESTING ${interval} Folloing Tick data] ${pair} + is pumping. Current price:  ${close}
-                                \n Previous volume: ${pair_data.data[0].volume} Current volume: ${pair_data.data[1].volume}
-                                \n https://www.binance.com/tradeDetail.html?symbol=${symbol.slice(0, -3)}_BTC`;
-                    console.log(message);
-                    bot.sendMessage(chatId, message);
-                }
             }
 
             resolve(true);
@@ -181,14 +196,14 @@ trackPrice = (pair, interval) => {
     })
 }
 
-create_pair_data = (pairs, symbol, close, volume, buyBaseVolume, btc_price) => {
+create_pair_data = (pairs, symbol, close, volume, buyBaseVolume, btc_price, time) => {
     var pair_data = pairs.filter(x => x.symbol === symbol)[0];
     if (!pair_data) {
         pair_data = {
             symbol: symbol,
             data: [{
                 date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-                timestamp: Date.now(),
+                timestamp: time || Date.now(),
                 price: close,
                 volume: volume,
                 buyVolume: buyBaseVolume,
@@ -198,13 +213,13 @@ create_pair_data = (pairs, symbol, close, volume, buyBaseVolume, btc_price) => {
 
         tracked_pairs.push(pair_data)
     }  else {
-        if (pair_data.data.length > 1) {
+        if (pair_data.data.length > 2) {
             pair_data.data.shift();
         }
 
         pair_data.data.push({
             date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-            timestamp: Date.now(),
+            timestamp: time || Date.now(),
             price: close,
             volume: volume,
             buyVolume: buyBaseVolume,
@@ -213,16 +228,6 @@ create_pair_data = (pairs, symbol, close, volume, buyBaseVolume, btc_price) => {
     }
 
     return pair_data;
-}
-
-calculate_ticks_data = (ticks) => {
-    let [first_tick, last_tick] = ticks;
-
-    if (first_tick.volume * 1.4 <= last_tick.volume && first_tick.buyVolume < last_tick.buyVolume) {
-        return true;
-    }
-
-    return false;
 }
 
 run()

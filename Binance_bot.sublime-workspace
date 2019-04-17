@@ -4,6 +4,78 @@
 		"selected_items":
 		[
 			[
+				"pa",
+				"pair_data"
+			],
+			[
+				"trac",
+				"tracked_pairs"
+			],
+			[
+				"long",
+				"longResistences"
+			],
+			[
+				"ki",
+				"kijunSen"
+			],
+			[
+				"track",
+				"trackHourlyPrice"
+			],
+			[
+				"ex",
+				"extraMessage"
+			],
+			[
+				"resis",
+				"resistences"
+			],
+			[
+				"tra",
+				"tracked_pairs"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"ee",
+				"eliminateSupports"
+			],
+			[
+				"supp",
+				"supports"
+			],
+			[
+				"su",
+				"support"
+			],
+			[
+				"ele",
+				"eliminateSupports"
+			],
+			[
+				"shor",
+				"shortSupports"
+			],
+			[
+				"sho",
+				"shortSupports"
+			],
+			[
+				"get",
+				"getLongSupports"
+			],
+			[
+				"getS",
+				"getShortSupports"
+			],
+			[
+				"tenkan",
+				"tenkanSen"
+			],
+			[
 				"des",
 				"decreaseDays"
 			],
@@ -56,10 +128,6 @@
 				"getElementById"
 			],
 			[
-				"get",
-				"getElementsByClassName"
-			],
-			[
 				"tr",
 				"trigger"
 			],
@@ -98,10 +166,6 @@
 			[
 				"se",
 				"setData"
-			],
-			[
-				"ele",
-				"element"
 			],
 			[
 				"getEl",
@@ -172,12 +236,71 @@
 	"buffers":
 	[
 		{
+			"file": "pump_detector.js",
+			"settings":
+			{
+				"buffer_size": 7938,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\nD:\\Projects\\stuffs\\autotrader-bot>node pump_detector.js\nnode-telegram-bot-api deprecated Automatic enabling of cancellation of promises is deprecated.\nIn the future, you will have to enable it yourself.\nSee https://github.com/yagop/node-telegram-bot-api/issues/319. module.js:652:30\n------------ NBT starting -------------\nNBT api accessable on port 80\n------------------------------\n start get_BTC_price\n------------------------------\n------------------------------\nBTC price: $6,482\n------------------------------\n------------------------------\n get_BTC_pairs start\n------------------------------\n357 total pairs\n------------------------------\nTotal BTC pairs: 1\n------------------------------\n------------------------------\n run detector\n------------------------------\nETHBTC got data\n[ { symbol: 'ETHBTC', data: [ [Object], [Object], [Object] ] } ]\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053174,\n  o: '0.07694500',\n  c: '0.07689700',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1176.59300000',\n  n: 1451,\n  x: false,\n  q: '90.51602562',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053175,\n  o: '0.07694500',\n  c: '0.07689700',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1176.59600000',\n  n: 1452,\n  x: false,\n  q: '90.51625631',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053180,\n  o: '0.07694500',\n  c: '0.07689700',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1176.63300000',\n  n: 1457,\n  x: false,\n  q: '90.51910148',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053183,\n  o: '0.07694500',\n  c: '0.07689700',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1176.70600000',\n  n: 1460,\n  x: false,\n  q: '90.52471495',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053189,\n  o: '0.07694500',\n  c: '0.07689700',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1176.75300000',\n  n: 1466,\n  x: false,\n  q: '90.52832908',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053193,\n  o: '0.07694500',\n  c: '0.07689700',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1176.79700000',\n  n: 1470,\n  x: false,\n  q: '90.53171253',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053195,\n  o: '0.07694500',\n  c: '0.07689700',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1178.02900000',\n  n: 1472,\n  x: false,\n  q: '90.62644963',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053199,\n  o: '0.07694500',\n  c: '0.07687900',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1178.84400000',\n  n: 1476,\n  x: false,\n  q: '90.68911729',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\npair ETHBTC\ncurrentPair { symbol: 'ETHBTC',\n  data:\n   [ { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697764,\n       price: '0.07701500',\n       volume: '2127.69400000',\n       buyVolume: '1602.12500000',\n       usdvolume: 1062199.8730307678 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07694500',\n       volume: '2568.63000000',\n       buyVolume: '1809.32200000',\n       usdvolume: 1281161.0037534165 },\n     { date: 'June 17th 2018, 10:18:17 pm',\n       timestamp: 1529248697765,\n       price: '0.07689700',\n       volume: '1172.49200000',\n       buyVolume: '902.75900000',\n       usdvolume: 584441.4931064595 } ] }\nticks { t: 1529247600000,\n  T: 1529249399999,\n  s: 'ETHBTC',\n  i: '30m',\n  f: 69051724,\n  L: 69053200,\n  o: '0.07694500',\n  c: '0.07687900',\n  h: '0.07697900',\n  l: '0.07685500',\n  v: '1178.84600000',\n  n: 1477,\n  x: false,\n  q: '90.68927104',\n  V: '902.75900000',\n  Q: '69.45598435',\n  B: '0' }\naverageVolumne NaN\n",
+			"settings":
+			{
+				"buffer_size": 9890,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\nD:\\Projects\\stuffs\\autotrader-bot>node pump_detector.js\nnode-telegram-bot-api deprecated Automatic enabling of cancellation of promises is deprecated.\nIn the future, you will have to enable it yourself.\nSee https://github.com/yagop/node-telegram-bot-api/issues/319. module.js:652:30\n------------ NBT starting -------------\nNBT api accessable on port 80\n------------------------------\n start get_BTC_price\n------------------------------\n------------------------------\nBTC price: $6,484\n------------------------------\n------------------------------\n get_BTC_pairs start\n------------------------------\n357 total pairs\n------------------------------\nTotal BTC pairs: 1\n------------------------------\n------------------------------\n run detector\n------------------------------\nETHBTC got data\n1529244000000\n1529245800000\n1529247600000\n[ { date: 'June 17th 2018, 10:28:04 pm',\n    timestamp: 1529249284361,\n    price: '0.07701500',\n    volume: '2127.69400000',\n    buyVolume: '1602.12500000',\n    usdvolume: 1062535.7949552585 },\n  { date: 'June 17th 2018, 10:28:04 pm',\n    timestamp: 1529249284362,\n    price: '0.07694500',\n    volume: '2568.63000000',\n    buyVolume: '1809.32200000',\n    usdvolume: 1281566.172385884 },\n  { date: 'June 17th 2018, 10:28:04 pm',\n    timestamp: 1529249284362,\n    price: '0.07702200',\n    volume: '1465.75600000',\n    buyVolume: '1114.24100000',\n    usdvolume: 732041.2486799597 } ]\n",
+			"settings":
+			{
+				"buffer_size": 1412,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "ichi_cloud.js",
 			"settings":
 			{
-				"buffer_size": 12425,
+				"buffer_size": 16557,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "indicators/ovb.js",
+			"settings":
+			{
+				"buffer_size": 903,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "indicators/resistence.js",
+			"settings":
+			{
+				"buffer_size": 1856,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "indicators/rsi.js",
+			"settings":
+			{
+				"buffer_size": 2683,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "if (brightcove == undefined) { var brightcove = {};\n    brightcove.getExperience = function() { alert(\"Please import APIModules_all.js in order to use the API.\"); }; }\nif (brightcove.experiences == undefined) {\n    brightcove.servicesURL = 'http://c.brightcove.com/services';\n    brightcove.cdnURL = 'http://admin.brightcove.com';\n    brightcove.secureCDNURL = 'https://sadmin.brightcove.com';\n    brightcove.secureServicesURL = 'https://secure.brightcove.com/services';\n    brightcove.USservicesURL = 'http://c.brightcove.com/services';\n    brightcove.UScdnURL = 'http://admin.brightcove.com';\n    brightcove.USsecureCDNURL = 'https://sadmin.brightcove.com';\n    brightcove.USsecureServicesURL = 'https://secure.brightcove.com/services';\n    brightcove.pubHost = 'c.$pubcode$.$zoneprefix$$zone$';\n    brightcove.pubSecureHost = 'secure.$pubcode$.$zoneprefix$$zone$';\n    brightcove.pubSubdomain = 'ariessaucetown.local';\n    brightcove.experiences = {};\n    brightcove.experienceObjects = {};\n    brightcove.renderExperienceInProcess = false;\n    brightcove.createExperiencesQueue = [];\n    brightcove.renderExperienceQueue = [];\n    brightcove.timeouts = {};\n    brightcove.flashTimeoutInterval = 10000;\n    brightcove.htmlTimeoutInterval = 10000;\n    brightcove.experienceNum = 0;\n    brightcove.majorVersion = 9;\n    brightcove.majorRevision = 0;\n    brightcove.minorRevision = 28;\n    brightcove.performCdnUrl = { 'development': '//players.brightcove.net/', 'qa': '//players.qa.brightcove.net/', 'staging': '//players.staging.brightcove.net/', 'production': '//players.brightcove.net/' };\n    brightcove.metricsBaseUrl = { 'development': '//data.aws-qa.rnatest.brightcove.com', 'qa': '//data.aws-qa.rnatest.brightcove.com', 'staging': '//data.aws-qa.rnatest.brightcove.com', 'production': '//metrics.brightcove.com/tracker' };\n    brightcove.analyticsErrors = { 'BAD_PUBLISHER_ID': -100, 'UNEXPECTED_MAPPING_RESPONSE': -101, 'MAPPINGS_CALL_FAILURE': -102 };\n    brightcove.servlet = { AS3: \"federated_f9\", HTML: \"htmlFederated\" };\n    brightcove.mappingFileData = {};\n    brightcove.isLinkDotBrightcoveURL = window.location.hostname.indexOf('link.brightcove.co.jp') >= 0;\n    brightcove.playerType = { FLASH: \"flash\", HTML: \"html\", FLASH_IFRAME: \"flashIFrame\", INSTALLER: \"installer\", NO_SUPPORT: \"nosupport\" };\n    brightcove.errorCodes = { UNKNOWN: 0, DOMAIN_RESTRICTED: 1, GEO_RESTRICTED: 2, INVALID_ID: 3, NO_CONTENT: 4, UNAVAILABLE_CONTENT: 5, UPGRADE_REQUIRED_FOR_VIDEO: 6, UPGRADE_REQUIRED_FOR_PLAYER: 7, SERVICE_UNAVAILABLE: 8 };\n    brightcove.defaultParam = {};\n    brightcove.defaultParam.width = '100%';\n    brightcove.defaultParam.height = '100%';\n    brightcove.defaultFlashParam = {};\n    brightcove.defaultFlashParam.allowScriptAccess = 'always';\n    brightcove.defaultFlashParam.allowFullScreen = 'true';\n    brightcove.defaultFlashParam.seamlessTabbing = false;\n    brightcove.defaultFlashParam.swliveconnect = true;\n    brightcove.defaultFlashParam.wmode = 'window';\n    brightcove.defaultFlashParam.quality = 'high';\n    brightcove.defaultFlashParam.bgcolor = '#999999';\n    brightcove.hasActiveX = brightcove.isIE = (window.ActiveXObject != undefined);\n    brightcove.userAgent = navigator.userAgent;\n    brightcove._queuedAPICalls = [];\n    var brightcoveJS = brightcove;\n    brightcove.createExperiences = function(pEvent, pElementID) {\n        var experiences = [];\n        var params;\n        var experience;\n        var flashSupport = brightcove.checkFlashSupport();\n        var htmlSupport = brightcove.checkHtmlSupport();\n        if (brightcove.renderExperienceInProcess) {\n            function createExperiencesWrapper(pEvent, pElementID) { return function() { brightcove.createExperiences(pEvent, pElementID); } }\n            brightcove.createExperiencesQueue.push(createExperiencesWrapper(pEvent, pElementID));\n            return;\n        }\n        if (pElementID != null) { experiences.push(document.getElementById(pElementID)); } else { experiences = brightcove.collectExperiences(); }\n        if (brightcove.hasActiveX) { params = document.getElementsByTagName('param'); }\n        var urlParams = brightcove.cacheUrlParams();\n        var numExperiences = experiences.length;\n        for (var i = 0; i < numExperiences; i++) {\n            experience = experiences[i];\n            experience = brightcove.copyDefaultParams(experience);\n            experience = brightcove.copySnippetParams(experience, params);\n            experience = brightcove.copyUrlParams(experience, urlParams, numExperiences);\n            var playerType = brightcove.determinePlayerType(experience, flashSupport, htmlSupport);\n            var secureConnections = false;\n            if (playerType == brightcove.playerType.HTML) { secureConnections = experience.params.secureHTMLConnections == \"true\"; } else { secureConnections = experience.params.secureConnections == \"true\"; }\n            if (playerType == brightcove.playerType.HTML) { delete experience.params.linkBaseURL; } else {\n                if (experience.params.includeAPI && experience.params.templateReadyHandler != null) {\n                    experience.params.originalTemplateReadyHandler = experience.params.templateReadyHandler;\n                    var handlerName = \"templateReadyHandler\" + experience.id;\n                    brightcove[handlerName] = (function(id) {\n                        return function(event) {\n                            if (brightcove.internal != null && brightcove.internal._instances[id] != null) { brightcove._addModuleToEvent(id, event); }\n                            var player = brightcove.experienceObjects[id];\n                            brightcove.callHandlerForPlayer(player, \"originalTemplateReadyHandler\", event);\n                        };\n                    })(experience.id);\n                    experience.params.templateReadyHandler = 'brightcove[\"' + handlerName + '\"]';\n                }\n            }\n            var file = brightcove.generateRequestUrl(experience, playerType, secureConnections);\n            if (document.location.protocol == \"http:\") {\n                var event = 'http://goku.brightcove.com/1pix.gif?';\n                var gokuParams = [\"dcsuri=/viewer/player_load_req\", \"playerType=\" + playerType, \"playerURL=\" + encodeURIComponent(document.location || \"\")];\n                var image = brightcove.createElement('image');\n                for (var j in experience.params) { gokuParams.push([encodeURIComponent(j) + \"=\" + encodeURIComponent(experience.params[j])]); }\n                event += gokuParams.join('&');\n                image.src = event;\n            }\n            brightcove.renderExperience(experience, file, playerType, secureConnections);\n        }\n    };\n    brightcove.collectExperiences = function() {\n        var experiences = [];\n        var allObjects = document.getElementsByTagName('object');\n        var numObjects = allObjects.length;\n        for (var i = 0; i < numObjects; i++) { if (/\\bBrightcoveExperience\\b/.test(allObjects[i].className)) { if (allObjects[i].type != 'application/x-shockwave-flash') { experiences.push(allObjects[i]); } } }\n        return experiences;\n    };\n    brightcove.cacheUrlParams = function() {\n        var urlParams = {};\n        urlParams.playerKey = decodeURIComponent(brightcove.getParameter(\"bckey\"));\n        urlParams.playerID = brightcove.getParameter(\"bcpid\");\n        urlParams.titleID = brightcove.getParameter(\"bctid\");\n        urlParams.lineupID = brightcove.getParameter(\"bclid\");\n        urlParams.autoStart = brightcove.getParameter(\"autoStart\");\n        urlParams.debuggerID = brightcove.getParameter(\"debuggerID\");\n        urlParams.forceHTML = brightcove.getParameter(\"forceHTML\");\n        urlParams.forceFlashIFrame = brightcove.getParameter(\"forceFlashIFrame\");\n        urlParams.debug = brightcove.getParameter(\"debug\");\n        urlParams.showNoContentMessage = brightcove.getParameter(\"showNoContentMessage\");\n        urlParams.htmlDefaultBitrate = brightcove.getParameter(\"htmlDefaultBitrate\");\n        urlParams.linkSrc = brightcove.getParameter(\"linkSrc\");\n        urlParams.enableMapping = brightcove.getParameter(\"enableMapping\");\n        if (brightcove.isLinkDotBrightcoveURL) { urlParams.height = brightcove.getParameter(\"height\");\n            urlParams.width = brightcove.getParameter(\"width\"); }\n        return urlParams;\n    };\n    brightcove.copyDefaultParams = function(experience) {\n        if (!experience.params) experience.params = {};\n        if (!experience.flashParams) experience.flashParams = {};\n        for (var i in brightcove.defaultParam) { experience.params[i] = brightcove.defaultParam[i]; }\n        for (var j in brightcove.defaultFlashParam) { experience.flashParams[j] = brightcove.defaultFlashParam[j]; }\n        if (experience.id.length > 0) { experience.params.flashID = experience.id; } else { experience.id = experience.params.flashID = 'bcExperienceObj' + (brightcove.experienceNum++); }\n        experience.params.identifierClassName = 'BrightcoveExperienceID_' + Math.floor(Math.random() * 10000);\n        return experience;\n    };\n    brightcove.copySnippetParams = function(experience, params) {\n        if (!brightcove.hasActiveX) { params = experience.getElementsByTagName('param'); }\n        var numParams = params.length;\n        var param;\n        for (var j = 0; j < numParams; j++) {\n            param = params[j];\n            if (brightcove.hasActiveX && param.parentNode.id != experience.id) { continue; }\n            experience.params[param.name] = param.value;\n        }\n        if (experience.params.bgcolor != undefined) experience.flashParams.bgcolor = experience.params.bgcolor;\n        if (experience.params.wmode != undefined) experience.flashParams.wmode = experience.params.wmode;\n        if (experience.params.seamlessTabbing != undefined) experience.flashParams.seamlessTabbing = experience.params.seamlessTabbing;\n        return experience;\n    };\n    brightcove.copyUrlParams = function(experience, urlParams) {\n        if (experience.params.autoStart == undefined && urlParams.autoStart != undefined) { experience.params.autoStart = urlParams.autoStart; }\n        if (urlParams.debuggerID != undefined) { experience.params.debuggerID = urlParams.debuggerID; }\n        if (urlParams.forceHTML != undefined && urlParams.forceHTML !== '') { experience.params.forceHTML = urlParams.forceHTML; }\n        if (urlParams.forceFlashIFrame != undefined && urlParams.forceFlashIFrame !== '') { experience.params.forceFlashIFrame = urlParams.forceFlashIFrame; }\n        if (urlParams.enableMapping != undefined && urlParams.enableMapping !== '') { experience.params.enableMapping = urlParams.enableMapping.toLowerCase() === 'true'; }\n        if (urlParams.debug != undefined && urlParams.debug !== '') { experience.params.debug = urlParams.debug; }\n        if (urlParams.showNoContentMessage != undefined && urlParams.showNoContentMessage != '') { experience.params.showNoContentMessage = urlParams.showNoContentMessage; }\n        if (urlParams.htmlDefaultBitrate != undefined && urlParams.htmlDefaultBitrate !== '') { experience.params.htmlDefaultBitrate = urlParams.htmlDefaultBitrate; }\n        if (urlParams.linkSrc != undefined && urlParams.linkSrc != '') { experience.params.linkSrc = urlParams.linkSrc; }\n        if (urlParams.height != undefined && urlParams.height != '') { experience.params.height = urlParams.height; }\n        if (urlParams.width != undefined && urlParams.width != '') { experience.params.width = urlParams.width; }\n        var overrideContent = (urlParams.playerID.length < 1 && urlParams.playerKey.length < 1) || (urlParams.playerID == experience.params.playerID) || (urlParams.playerKey == experience.params.playerKey);\n        if (overrideContent) {\n            if (urlParams.titleID.length > 0) { experience.params.videoID = urlParams.titleID;\n                experience.params[\"@videoPlayer\"] = urlParams.titleID;\n                experience.params.autoStart = (experience.params.autoStart != \"false\" && urlParams.autoStart != \"false\"); }\n            if (urlParams.lineupID.length > 0) { experience.params.lineupID = urlParams.lineupID; }\n        }\n        return experience;\n    };\n    brightcove.determinePlayerType = function(experience, flashSupport, htmlSupport) {\n        if (flashSupport == null && htmlSupport == false) { return brightcove.playerType.NO_SUPPORT; }\n        if (experience.params.forceHTML) {\n            if (window.console) { var message = \"The forceHTML parameter was used for the Brightcove player. This value should ONLY be used for\";\n                message += \" development and testing purposes and is not supported in production environments.\";\n                console.log(message); }\n            return brightcove.playerType.HTML;\n        }\n        if (experience.params.forceFlashIFrame || (brightcove.isMetroIE() && flashSupport == null)) { return brightcove.playerType.FLASH_IFRAME; }\n        if (flashSupport != null) { if (brightcove.isFlashVersionSufficient(experience, flashSupport)) { return brightcove.playerType.FLASH; } else { return brightcove.playerType.INSTALLER; } }\n        if (htmlSupport) { if (brightcove.isSupportedHTMLDevice() || experience.params.htmlFallback) { return brightcove.playerType.HTML; } }\n        return brightcove.playerType.NO_SUPPORT;\n    };\n    brightcove.isFlashVersionSufficient = function(experience, flashSupport) {\n        if (flashSupport == null) return false;\n        var setMajorVersion = false;\n        var requestedMajorVersion;\n        var requestedMajorRevision;\n        var requestedMinorRevision;\n        if (experience.params.majorVersion != undefined) { requestedMajorVersion = parseInt(experience.params.majorVersion, 10);\n            setMajorVersion = true; } else { requestedMajorVersion = brightcove.majorVersion; }\n        if (experience.params.majorRevision != undefined) { requestedMajorRevision = parseInt(experience.params.majorRevision, 10); } else { if (setMajorVersion) { requestedMajorRevision = 0; } else { requestedMajorRevision = brightcove.majorRevision; } }\n        if (experience.params.minorRevision != undefined) { requestedMinorRevision = parseInt(experience.params.minorRevision, 10); } else { if (setMajorVersion) { requestedMinorRevision = 0; } else { requestedMinorRevision = brightcove.minorRevision; } }\n        return (flashSupport.majorVersion > requestedMajorVersion || (flashSupport.majorVersion == requestedMajorVersion && flashSupport.majorRevision > requestedMajorRevision) || (flashSupport.majorVersion == requestedMajorVersion && flashSupport.majorRevision == requestedMajorRevision && flashSupport.minorRevision >= requestedMinorRevision));\n    };\n    brightcove.generateRequestUrl = function(experience, playerType, secureConnections) {\n        var file;\n        if (playerType == brightcove.playerType.INSTALLER) { file = brightcove.cdnURL + \"/viewer/playerProductInstall.swf\"; var MMPlayerType = brightcove.hasActiveX ? \"ActiveX\" : \"PlugIn\";\n            document.title = document.title.slice(0, 47) + \" - Flash Player Installation\"; var MMdoctitle = document.title;\n            file += \"?&MMredirectURL=\" + window.location + '&MMplayerType=' + MMPlayerType + '&MMdoctitle=' + MMdoctitle;\n            brightcove.reportUpgradeRequired(experience); } else {\n            if (secureConnections) { file = brightcove.getPubURL(brightcove.secureServicesURL, brightcove.pubSecureHost, experience.params.pubCode); } else { file = brightcove.getPubURL(brightcove.servicesURL, brightcove.pubHost, experience.params.pubCode); }\n            var servlet = (playerType == brightcove.playerType.HTML) ? brightcove.servlet.HTML : brightcove.servlet.AS3;\n            file += '/viewer/' + servlet + '?' + brightcove.getOverrides();\n            for (var config in experience.params) { file += '&' + encodeURIComponent(config) + '=' + encodeURIComponent(experience.params[config]); }\n        }\n        return file;\n    };\n    brightcove.renderInstallGif = function(experience, secureConnections) { var cdnURL = secureConnections ? brightcove.secureCDNURL : brightcove.cdnURL; var upgradeFlashImage = cdnURL.indexOf('.co.jp') > 0 ? \"upgrade_flash_player_kk.gif\" : \"upgrade_flash_player2.gif\"; var linkHTML = \"<a href='http://www.adobe.com/go/getflash/' target='_blank'><img src='\" + cdnURL + \"/viewer/\" + upgradeFlashImage + \"' alt='Get Flash Player' width='314' height='200' border='0'></a>\"; return linkHTML; };\n    brightcove.renderExperience = function(experience, file, playerType, secureConnections) {\n        var experienceElement;\n        var experienceID = experience.id;\n        var isPubIdInBlacklist = false;\n        var publisherID;\n        var dummyElement;\n        if (brightcove.renderExperienceInProcess) {\n            function wrapRenderExperience(experience, file, playerType, secureConnections) { return function() { brightcove.renderExperience(experience, file, playerType, secureConnections); } }\n            brightcove.renderExperienceQueue.push(wrapRenderExperience(experience, file, playerType, secureConnections));\n            return;\n        }\n        brightcove.renderExperienceInProcess = true;\n        if (!(experience.params.playerKey || experience.params.playerID || experience.params.playerId || experience.params.playerid)) {\n            if (window.console) { console.log(\"No playerID or playerKey was found for the Brightcove player, so it can not be rendered.\"); }\n            return;\n        }\n        brightcove.experienceObjects[experienceID] = experience;\n        var unminified = (brightcove.getParameter(\"unminified\") == \"true\") || (experience.params.unminified === \"true\");\n        if (experience.params.includeAPI === \"true\" && !(brightcove._apiRequested || brightcove.api)) {\n            var source = \"/js/api/\";\n            if (unminified) { source += \"unminified/\"; }\n            source += \"SmartPlayerAPI.js\";\n            var apiInclude = brightcove.createElement('script');\n            apiInclude.type = \"text/javascript\";\n            var cdnURL = secureConnections ? brightcove.secureCDNURL : brightcove.cdnURL;\n            apiInclude.src = cdnURL + source;\n            experience.parentNode.appendChild(apiInclude);\n            brightcove._apiRequested = true;\n        }\n        file += \"&startTime=\" + new Date().getTime();\n        if (experience.params.playerKey) { publisherID = brightcove.decodePublisherID(experience.params.playerKey); } else { publisherID = experience.params.publisherID; }\n        dummyElement = brightcove.createDummyElement(playerType, experience, secureConnections);\n        if (experience.params.enableMapping === true || (experience.params.enableMapping !== false && !isPubIdInBlacklist)) {\n            brightcove.makeMappingFileRequest(publisherID, function(err, data) {\n                if (err) { if (window.console) { console.log(err); } }\n                brightcove.generateExperienceElement(experience, publisherID, dummyElement, unminified, file, playerType, experienceID, secureConnections, data);\n            });\n        } else { brightcove.generateExperienceElement(experience, publisherID, dummyElement, unminified, file, playerType, experienceID, secureConnections, null); }\n    };\n    brightcove.generateExperienceElement = function(experience, publisherID, dummyElement, unminified, file, playerType, experienceID, secureConnections, data) {\n        var playerID;\n        var bcPublisherID;\n        var bcPlayerID;\n        var bcEmbedID;\n        var bcNewSmartPlayerID;\n        var bcForceRefID;\n        var parsedDataObject = {};\n        var bcIframe;\n        var replaceElement;\n        var container;\n        var timeout = brightcove.flashTimeoutInterval;\n        var cdnURL = secureConnections ? brightcove.secureCDNURL : brightcove.cdnURL;\n        var isKKPod = cdnURL.indexOf('.co.jp') > 0;\n        var eolExtensionList = [];\n        if (experience.params.enableMapping !== false && data && data.statusCode === 200 && data.response && data.response !== \"\") {\n            try { if (experience.params.playerKey) { if (window.JSON) { parsedDataObject = JSON.parse(data.response)[experience.params.playerKey]; } else { parsedDataObject = brightcove.json_parse(data.response)[experience.params.playerKey]; } } else { playerID = experience.params.playerId || experience.params.playerID || experience.params.playerid; if (window.JSON) { parsedDataObject = JSON.parse(data.response); } else { parsedDataObject = brightcove.json_parse(data.response); } } } catch (ex) { if (window.console) { console.log('Error: Unable to parse mapping file: ' + ex.message); } }\n            if (!experience.params.playerKey) { for (var mappedPlayerKey in parsedDataObject) { var playerMapItem; if (parsedDataObject.hasOwnProperty(mappedPlayerKey)) { playerMapItem = parsedDataObject[mappedPlayerKey]; if (playerMapItem.smart_player_id && playerMapItem.smart_player_id === playerID) { parsedDataObject = playerMapItem; break; } } } }\n            if (parsedDataObject && (((!parsedDataObject.hasOwnProperty('enable_mapping') || parsedDataObject.enable_mapping) && experience.params.enableMapping !== false) || ((parsedDataObject.hasOwnProperty('enable_mapping') && parsedDataObject.enable_mapping === false) && experience.params.enableMapping === true))) { bcPublisherID = parsedDataObject.account_id ? parsedDataObject.account_id : publisherID;\n                bcPlayerID = parsedDataObject.player_id;\n                bcEmbedID = parsedDataObject.embed_id || 'default';\n                bcNewSmartPlayerID = parsedDataObject.new_smart_player_id;\n                bcForceRefID = parsedDataObject.force_ref_id || false; }\n            var isInExtensionList = true;\n            if (Array.prototype.indexOf) { isInExtensionList = eolExtensionList.indexOf(String(publisherID)) !== -1; } else { for (var i = 0; i < eolExtensionList.length; i++) { if (eolExtensionList[i] === String(publisherID)) { isInExtensionList = true; break; } } }\n            if (!bcPlayerID && (!isInExtensionList || experience.params.enableMapping === true)) { bcPlayerID = 'default';\n                bcEmbedID = bcEmbedID || 'default'; }\n        }\n        if (bcForceRefID) { experience = brightcove.forceRefID(experience);\n            file = brightcove.generateRequestUrl(experience, playerType, secureConnections); }\n        if (bcNewSmartPlayerID) { delete experience.params.playerKey;\n            delete experience.params.playerId;\n            delete experience.params.playerid;\n            experience.params.playerID = bcNewSmartPlayerID;\n            brightcove.servicesURL = brightcove.USservicesURL;\n            brightcove.cdnURL = brightcove.UScdnURL;\n            brightcove.secureCDNURL = brightcove.USsecureCDNURL;\n            brightcove.secureServicesURL = brightcove.USsecureServicesURL;\n            file = brightcove.generateRequestUrl(experience, playerType, secureConnections); } else if (bcPlayerID && !bcPublisherID) { bcPublisherID = publisherID; }\n        if (isKKPod && (!parsedDataObject || !parsedDataObject.player_id)) {\n            var iframeDoc;\n            experienceElement = brightcove.createIFrame(experience);\n            brightcove.copyNodeProperties(dummyElement, experienceElement);\n            replaceElement = brightcove.getElementByClassNameCrossBrowser(experience.params.identifierClassName);\n            if (replaceElement && replaceElement.parentNode) { replaceElement.parentNode.replaceChild(experienceElement, replaceElement); }\n            brightcove.experiences[experienceID] = experienceElement;\n            iframeDoc = experienceElement.contentDocument || experienceElement.contentWindow.document;\n            iframeDoc.write('<img height=\"100%\" width=\"100%\" src=\"//players.brightcove.net/kk404.png\"/>');\n        } else if (bcPublisherID && bcPlayerID) {\n            bcIframe = brightcove.getBCPlayerIframe(experience, bcPublisherID, bcPlayerID, bcEmbedID);\n            experienceElement = brightcove.createIFrame(experience);\n            brightcove.copyNodeProperties(dummyElement, experienceElement);\n            replaceElement = brightcove.getElementByClassNameCrossBrowser(experience.params.identifierClassName);\n            experienceElement.setAttribute('allowFullScreen', '');\n            experienceElement.setAttribute('webkitAllowFullScreen', '');\n            experienceElement.setAttribute('mozillaAllowFullScreen', '');\n            if (replaceElement && replaceElement.parentNode) { replaceElement.parentNode.replaceChild(experienceElement, replaceElement); }\n            brightcove.experiences[experienceID] = experienceElement;\n            experienceElement.src = bcIframe;\n        } else {\n            var iframeDoc;\n            experienceElement = brightcove.createIFrame(experience);\n            brightcove.copyNodeProperties(dummyElement, experienceElement);\n            replaceElement = brightcove.getElementByClassNameCrossBrowser(experience.params.identifierClassName);\n            if (replaceElement && replaceElement.parentNode) { replaceElement.parentNode.replaceChild(experienceElement, replaceElement); }\n            brightcove.experiences[experienceID] = experienceElement;\n            iframeDoc = experienceElement.contentDocument || experienceElement.contentWindow.document;\n            iframeDoc.write('<img height=\"100%\" width=\"100%\" src=\"//players.brightcove.net/smart-player-unavailable.png\"/>');\n        }\n        brightcove.renderExperienceInProcess = false;\n        if (brightcove.renderExperienceQueue.length > 0) { brightcove.renderExperienceQueue.shift()(); } else if (brightcove.createExperiencesQueue.length > 0) { brightcove.createExperiencesQueue.shift()(); }\n        brightcove.timeouts[experience.id] = setTimeout(function() { brightcove.handleExperienceTimeout(experienceID); }, timeout);\n    };\n    brightcove.copyNode = function(elementFrom) { var experienceElement = elementFrom.cloneNode(true);\n        brightcove.copyNodeProperties(elementFrom, experienceElement); return experienceElement; };\n    brightcove.copyNodeProperties = function(elementFrom, elementTo) {\n        var propertyItem;\n        var propertyList = ['name', 'title', 'height', 'width', 'border', 'onclick', 'ondblclick', 'ondrag', 'ondragend', 'ondragenter', 'ondragleave', 'ondragover', 'ondragstart', 'ondrop', 'onmousedown', 'onmousemove', 'onmouseout', 'onmouseover', 'onmouseup', 'onmousewheel', 'onscroll', 'onwheel'];\n        for (propertyItem in propertyList) { if (elementFrom[propertyList[propertyItem]]) { elementTo[propertyList[propertyItem]] = elementFrom[propertyList[propertyItem]]; } }\n        if (elementTo.className !== elementFrom.className) { elementTo.className += ' ' + elementFrom.className; }\n    };\n    brightcove.getElementsByClassName = function(selector) {\n        var retnode = [];\n        var elem = document.getElementsByTagName('*');\n        for (var i = 0; i < elem.length; i++) { if ((' ' + elem[i].className + ' ').indexOf(' ' + selector + ' ') > -1) retnode.push(elem[i]); }\n        return retnode;\n    };\n    brightcove.getElementByClassNameCrossBrowser = function(selector) {\n        var searchElement;\n        if (document.querySelectorAll) { searchElement = document.querySelectorAll('.' + selector)[0]; } else { searchElement = brightcove.getElementsByClassName(selector)[0]; }\n        return searchElement;\n    };\n    brightcove.createDummyElement = function(playerType, experience, secureConnections) {\n        var dummyElement;\n        var containerID;\n        var flashObjectParams;\n        var flashEmbedStr;\n        experience.className += ' ' + experience.params.identifierClassName;\n        if (playerType === brightcove.playerType.NO_SUPPORT) {\n            containerID = '_container' + experience.id;\n            dummyElement = brightcove.createElement('span');\n            if (experience.params.height.charAt(experience.params.height.length - 1) == \"%\") { dummyElement.style.display = 'block'; } else { dummyElement.style.display = 'inline-block'; }\n            dummyElement.className = experience.className;\n            dummyElement.id = containerID;\n        } else if (playerType === brightcove.playerType.HTML || playerType === brightcove.playerType.FLASH_IFRAME) { dummyElement = brightcove.createIFrame(experience); if (experience && experience.parentNode) { experience.parentNode.replaceChild(dummyElement, experience); } } else { if (brightcove.hasActiveX) { flashEmbedStr = brightcove.getDummyFlashEmbedString(experience);\n                containerID = '_container' + experience.id;\n                dummyElement = brightcove.createFlashEmbed(containerID, experience.params.height); if (experience && experience.parentNode) { experience.parentNode.replaceChild(dummyElement, experience);\n                    dummyElement.innerHTML = flashEmbedStr; } } else { flashObjectParams = brightcove.getFlashObjectParams(experience);\n                dummyElement = brightcove.createFlashObject(flashObjectParams); if (experience && experience.parentNode) { experience.parentNode.replaceChild(dummyElement, experience); } } }\n        return dummyElement;\n    };\n    brightcove.getDummyFlashEmbedString = function(experience) {\n        return '<object' +\n            ' id=\"' + experience.id + '\"' +\n            ' width=\"' + experience.params.width + '\"' +\n            ' height=\"' + experience.params.height + '\"' +\n            ' class=\"BrightcoveExperience ' + experience.params.identifierClassName + '\" >' +\n            '</object>';\n    };\n    brightcove.makeMetricsErrorCall = function(publisherID, errorType) { var img = document.createElement('img'); var metricsUrl = brightcove.metricsBaseUrl['production'];\n        img.src = metricsUrl + '?' + 'account=' + publisherID + '&domain=videocloud' + '&platform=as3' + '&event=error' + '&error_code=' + errorType; };\n    brightcove.createIFrame = function(experience) { var iframeElement = brightcove.createElement('iframe');\n        iframeElement.id = experience.id;\n        iframeElement.width = experience.params.width;\n        iframeElement.height = experience.params.height;\n        iframeElement.className = experience.className;\n        iframeElement.frameborder = 0;\n        iframeElement.scrolling = \"no\";\n        iframeElement.style.borderStyle = \"none\"; return iframeElement; };\n    brightcove.getFlashEmbedString = function(experience, secureConnections) {\n        var options = '';\n        var flashParams = experience.flashParams;\n        for (var pOption in flashParams) { options += '<param name=\"' + pOption + '\" value=\"' + experience.flashParams[pOption] + '\" />'; }\n        var protocol = secureConnections ? \"https\" : \"http\";\n        return '<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"' +\n            ' codebase=\"' + protocol + '://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=' + brightcove.majorVersion + ',' + brightcove.majorRevision + ',' + brightcove.minorRevision + ',0\"' +\n            ' id=\"' + experience.id + '\"' +\n            ' width=\"' + experience.params.width + '\"' +\n            ' height=\"' + experience.params.height + '\"' +\n            ' type=\"application/x-shockwave-flash\"' +\n            ' class=\"BrightcoveExperience ' + experience.params.identifierClassName + '\">' +\n            options +\n            '</object>';\n    };\n    brightcove.getFlashObjectParams = function(experience, file) {\n        var experienceObject = {};\n        experienceObject.type = 'application/x-shockwave-flash';\n        experienceObject.data = file;\n        experienceObject.id = experience.params.flashID;\n        experienceObject.width = experience.params.width;\n        experienceObject.height = experience.params.height;\n        experienceObject.className = experience.className;\n        experienceObject.seamlesstabbing = experience.flashParams.seamlessTabbing;\n        for (var config in experience.flashParams) { experienceObject[\"flashParam_\" + config] = experience.flashParams[config]; }\n        return experienceObject;\n    };\n    brightcove.createFlashEmbed = function(experienceId, height) {\n        var container = brightcove.createElement('span');\n        if (height.charAt(height.length - 1) == \"%\") { container.style.display = 'block'; } else { container.style.display = 'inline-block'; }\n        container.id = experienceId;\n        return container;\n    };\n    brightcove.createFlashObject = function(playerConfig) {\n        var experienceElement = brightcove.createElement('object');\n        experienceElement.type = playerConfig.type;\n        if (playerConfig.data) { experienceElement.data = playerConfig.data; }\n        experienceElement.id = playerConfig.id;\n        experienceElement.width = playerConfig.width;\n        experienceElement.height = playerConfig.height;\n        experienceElement.className = playerConfig.className;\n        experienceElement.setAttribute(\"seamlesstabbing\", playerConfig.seamlessTabbing);\n        var tempParam;\n        var flashParamPrefix = \"flashParam_\";\n        for (var config in playerConfig) { var flashParamInd = config.indexOf(flashParamPrefix); if (flashParamInd == 0) { tempParam = brightcove.createElement('param');\n                tempParam.name = config.substring(flashParamPrefix.length);\n                tempParam.value = playerConfig[config];\n                experienceElement.appendChild(tempParam); } }\n        return experienceElement;\n    };\n    brightcove.handleExperienceTimeout = function(pID) { brightcove.executeErrorHandlerForExperience(brightcove.experienceObjects[pID], { type: \"templateError\", errorType: \"serviceUnavailable\", code: brightcove.errorCodes.SERVICE_UNAVAILABLE, info: pID }); };\n    brightcove.reportPlayerLoad = function(pID) { var timeout = brightcove.timeouts[pID]; if (timeout) { clearTimeout(timeout); } };\n    brightcove.reportUpgradeRequired = function(pExperience) { brightcove.executeErrorHandlerForExperience(pExperience, { type: \"templateError\", errorType: \"upgradeRequiredForPlayer\", code: brightcove.errorCodes.UPGRADE_REQUIRED_FOR_PLAYER, info: pExperience.id }); };\n    brightcove.checkFlashSupport = function() { var hasActiveX = (window.ActiveXObject != undefined); return (hasActiveX) ? brightcove.checkFlashSupportIE() : brightcove.checkFlashSupportStandard(); };\n    brightcove.checkFlashSupportIE = function() {\n        var versions;\n        try { var flash = new ActiveXObject(\"ShockwaveFlash.ShockwaveFlash.7\"); var version = flash.GetVariable('$version');\n            versions = / ([0-9]+),([0-9]+),([0-9]+),/.exec(version); } catch (exception) { return null; }\n        return { majorVersion: versions[1], majorRevision: versions[2], minorRevision: versions[3] };\n    };\n    brightcove.isMetroIE = function() {\n        var version = 0;\n        if (navigator.appVersion.indexOf(\"MSIE\") != -1) { var appSplit = navigator.appVersion.split(\"MSIE\"); if (appSplit.length > 1) { version = parseFloat(appSplit[1]); } }\n        if (version < 10 || isNaN(version)) { return false; }\n        var activeXSupport = false;\n        try { activeXSupport = !!new ActiveXObject(\"htmlfile\"); } catch (e) { activeXSupport = false; }\n        return !activeXSupport;\n    };\n    brightcove.checkFlashSupportStandard = function() {\n        var versions;\n        var majorVersion;\n        var majorRevision;\n        var minorRevision;\n        try {\n            if (typeof navigator.plugins != 'undefined' && navigator.plugins.length > 0) {\n                if (navigator.plugins[\"Shockwave Flash 2.0\"] || navigator.plugins[\"Shockwave Flash\"]) {\n                    var swfVersion = navigator.plugins[\"Shockwave Flash 2.0\"] ? \" 2.0\" : \"\";\n                    var description = navigator.plugins[\"Shockwave Flash\" + swfVersion].description;\n                    var filename = navigator.plugins[\"Shockwave Flash\" + swfVersion].filename;\n                    if (filename.match) { if (filename.toLowerCase().match(/lite/)) { throw new Error(); } }\n                    versions = description.split(\" \");\n                    majorVersion = versions[2].split(\".\")[0];\n                    majorRevision = versions[2].split(\".\")[1];\n                    minorRevision = versions[3];\n                    if (minorRevision == \"\") { minorRevision = versions[4]; }\n                    if (minorRevision[0] == \"d\") { minorRevision = minorRevision.substring(1); } else if (minorRevision[0] == \"r\") { minorRevision = minorRevision.substring(1); if (minorRevision.indexOf(\"d\") > 0) { minorRevision = minorRevision.substring(0, minorRevision.indexOf(\"d\")); } }\n                } else { throw new Error(); }\n            } else { return null; }\n        } catch (exception) { return null; }\n        return { majorVersion: majorVersion, majorRevision: majorRevision, minorRevision: minorRevision };\n    };\n    brightcove.checkHtmlSupport = function() {\n        var v = brightcove.createElement('video');\n        var videoSupport = true;\n        if (!brightcove.userAgent.match(new RegExp(\"android\", \"i\"))) { videoSupport = !!(v.canPlayType && v.canPlayType('video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"').replace(/no/, '')); }\n        if (brightcove.userAgent.match(/BlackBerry.*Version\\/6\\.0/)) { return false; }\n        var canvasSupport = !!brightcove.createElement('canvas').getContext;\n        return videoSupport && canvasSupport;\n    };\n    brightcove.isSupportedHTMLDevice = function(pUAString) {\n        var types = [\"iPad\", \"iPhone\", \"iPod\", \"android\", \"Silk\", \"IEMobile\"];\n        var numTypes = types.length;\n        var uaString = pUAString || brightcove.userAgent;\n        for (var i = 0; i < numTypes; i++) { if (uaString.match(new RegExp(types[i], \"i\"))) { return true; } }\n        return false;\n    };\n    brightcove.getTechnology = function(pExperienceId) {\n        for (var id in brightcove.experiences) { if (pExperienceId == id) { return (brightcove.experiences[id].tagName == \"object\") ? brightcove.playerType.FLASH : brightcove.playerType.HTML; } }\n        return brightcove.playerType.NO_SUPPORT;\n    };\n    brightcove.respondToMessages = function(pMessage) {\n        if (brightcove.verifyMessage(pMessage)) {\n            var messageData = pMessage.data;\n            if (messageData.charAt(0) == \"\\\"\") { if (window.JSON) { messageData = window.JSON.parse(messageData); } else { messageData = brightcove.json_parse(messageData); } }\n            var messageParts = messageData.split(\"::\");\n            var type = messageParts[1];\n            var messageInfo = \"\";\n            for (var index = 2; index < messageParts.length; index++) { messageInfo += messageParts[index]; }\n            var messageJson = messageInfo.split(\"\\n\").join(\" \");\n            var messageDataObject;\n            if (window.JSON) { messageDataObject = window.JSON.parse(messageJson); } else { messageDataObject = brightcove.json_parse(messageJson); }\n            switch (type) {\n                case \"error\":\n                    brightcove.executeMessageCallback(messageDataObject, brightcove.executeErrorHandlerForExperience);\n                    break;\n                case \"api\":\n                    brightcove.handleAPICallForHTML(messageDataObject);\n                    break;\n                case \"handler\":\n                    var event = brightcove.internal._convertDates(messageDataObject.event);\n                    try { brightcove.internal._handlers[messageDataObject.handler](event); } catch (e) {}\n                    break;\n                case \"asyncGetter\":\n                    var data = brightcove.internal._convertDates(messageDataObject.data);\n                    brightcove.internal._handlers[messageDataObject.handler](data);\n                    break;\n            }\n        }\n    };\n    brightcove.verifyMessage = function(pMessage) { return (/^brightcove\\.player/).test(pMessage.data); };\n    brightcove.handleAPICallForHTML = function(pMessageObject) {\n        var experience = brightcove.experienceObjects[pMessageObject.id];\n        if (experience == null) { return; }\n        var id = experience.id;\n        var method = pMessageObject.method;\n        switch (method) {\n            case \"initializeBridge\":\n                brightcove.reportPlayerLoad(id);\n                if (pMessageObject.arguments[0]) { if (brightcove.internal != null) { brightcove.internal._setAPICallback(id, null, pMessageObject.arguments[1]);\n                        brightcove.callHandlerForPlayer(experience, \"templateLoadHandler\", id); } else if (brightcove._apiRequested) { brightcove._queuedAPICalls.push(pMessageObject); } }\n                break;\n            case \"callTemplateReady\":\n                if (brightcove._apiRequested && !brightcove.internal) { brightcove._queuedAPICalls.push(pMessageObject); } else { var event = pMessageObject.arguments;\n                    brightcove._addModuleToEvent(id, event);\n                    brightcove.callHandlerForPlayer(experience, \"templateReadyHandler\", event); }\n                break;\n        }\n    };\n    brightcove._addModuleToEvent = function(pID, pEvent) { if (pEvent.type != null && brightcove.api) { var experience = brightcove.api.getExperience(pID); if (experience) { pEvent.target = experience.getModule(\"experience\"); } } };\n    brightcove.callHandlerForPlayer = function(pExperience, pHandler, pArgument) {\n        if (pExperience && pExperience.params && pExperience.params[pHandler]) {\n            var namespaceArray = pExperience.params[pHandler].split(\".\");\n            var namespaces;\n            if ((namespaces = namespaceArray.length) > 1) {\n                var trace = window;\n                for (var i = 0; i < namespaces; i++) { trace = trace[namespaceArray[i]]; }\n                if (typeof trace === \"function\") { trace(pArgument); }\n            } else { window[pExperience.params[pHandler]](pArgument); }\n        }\n    };\n    brightcove.executeErrorHandlerForExperience = function(pExperience, pErrorObject) { brightcove.callHandlerForPlayer(pExperience, \"templateErrorHandler\", pErrorObject); };\n    brightcove.executeMessageCallback = function(pMessageDataObject, pCallback) { var experience; for (var experienceKey in brightcove.experienceObjects) { experience = brightcove.experienceObjects[experienceKey]; if (experience.element.src === pMessageDataObject.__srcUrl) { delete pMessageDataObject.__srcUrl;\n                pCallback(experience, pMessageDataObject); break; } } };\n    brightcove.createExperience = function(pElement, pParentOrSibling, pAppend) {\n        if (!pElement.id || pElement.id.length < 1) { pElement.id = 'bcExperienceObj' + (brightcove.experienceNum++); }\n        if (pAppend) { pParentOrSibling.appendChild(pElement); } else { pParentOrSibling.parentNode.insertBefore(pElement, pParentOrSibling); }\n        brightcove.createExperiences(null, pElement.id);\n    };\n    brightcove.removeExperience = function(pID) { if (brightcove.experiences[pID] != null) { brightcove.experiences[pID].parentNode.removeChild(brightcove.experiences[pID]); } };\n    brightcove.getURL = function() {\n        var url;\n        if (typeof window.location.search != 'undefined') { url = window.location.search; } else { url = /(\\?.*)$/.exec(document.location.href); }\n        return url;\n    };\n    brightcove.getOverrides = function() {\n        var url = brightcove.getURL();\n        var query = new RegExp('@[\\\\w\\\\.]+=[^&]+', 'g');\n        var value = query.exec(url);\n        var overrides = \"\";\n        while (value != null) { overrides += \"&\" + value;\n            value = query.exec(url); }\n        return overrides;\n    };\n    brightcove.getParameter = function(pName, pDefaultValue) { if (pDefaultValue == null) pDefaultValue = \"\"; var url = brightcove.getURL(); var query = new RegExp(pName + '=([^&]*)'); var value = query.exec(url); if (value != null) { return value[1]; } else { return pDefaultValue; } };\n    brightcove.createElement = function(el) { if (document.createElementNS) { return document.createElementNS('http://www.w3.org/1999/xhtml', el); } else { return document.createElement(el); } };\n    brightcove.i18n = { 'BROWSER_TOO_OLD': 'The browser you are using is too old. Please upgrade to the latest version of your browser.' };\n    brightcove.removeListeners = function() {\n        if (/KHTML/i.test(navigator.userAgent)) { clearInterval(checkLoad);\n            document.removeEventListener('load', brightcove.createExperiences, false); }\n        if (typeof document.addEventListener != 'undefined') { document.removeEventListener('DOMContentLoaded', brightcove.createExperiences, false);\n            document.removeEventListener('load', brightcove.createExperiences, false); } else if (typeof window.attachEvent != 'undefined') { window.detachEvent('onload', brightcove.createExperiences); }\n    };\n    brightcove.getPubURL = function(source, host, pubCode) { if (!pubCode || pubCode == \"\") return source; var re = /^([htps]{4,5}\\:\\/\\/)([^\\/\\:]+)/i;\n        host = host.replace(\"$pubcode$\", pubCode).replace(\"$zoneprefix$$zone$\", brightcove.pubSubdomain); return source.replace(re, \"$1\" + host); };\n    brightcove.createExperiencesPostLoad = function() { brightcove.removeListeners();\n        brightcove.createExperiences(); };\n    brightcove.encode = function(string) { string = escape(string);\n        string = string.replace(/\\+/g, \"%2B\");\n        string = string.replace(/\\-/g, \"%2D\");\n        string = string.replace(/\\*/g, \"%2A\");\n        string = string.replace(/\\//g, \"%2F\");\n        string = string.replace(/\\./g, \"%2E\");\n        string = string.replace(/_/g, \"%5F\");\n        string = string.replace(/@/g, \"%40\"); return string; };\n    brightcove.decodePublisherID = function(playerKey) {\n        var b64;\n        var bytes = [];\n        var keys = [];\n        var byteArrayToLong = function(byteArray, length) {\n            var value = 0;\n            for (var i = 0; i < length; i++) { value = (value * 256) + byteArray[i]; }\n            return value;\n        };\n        if (!playerKey || playerKey.indexOf(',') < 0) {\n            if (window.console) { console.log('The player key is in an unexpected format.â€‚â€‚Unable to extract publisher ID for potential use with player migration.'); }\n            return;\n        }\n        playerKey = playerKey.replace(/\\./g, \"~\");\n        keys = playerKey.split(',');\n        try { b64 = brightcove.base64().toByteArray(keys[1]); } catch (ex) {\n            if (window.console) { console.log('The player key is in an unexpected format.â€‚â€‚Unable to extract publisher ID for potential use with player migration: ' + ex.message); }\n            return;\n        }\n        return byteArrayToLong(b64, 8);\n    };\n    brightcove.makeMappingFileRequest = function(publisherID, callback) {\n        if (!publisherID) { brightcove.makeMetricsErrorCall('null', brightcove.analyticsErrors.BAD_PUBLISHER_ID); return callback(); } else if (brightcove.mappingFileData.hasOwnProperty(publisherID)) { return callback(null, brightcove.mappingFileData[publisherID]); } else {\n            return brightcove.makeAjaxRequest('GET', brightcove.performCdnUrl['production'] + publisherID + '/migration/mappings.json', function(err, data) {\n                if (window.console && data && data.statusCode === 404) { console.log('It is safe to ignore 404 messages for mappings.json file requests.'); } else if (data && data.statusCode === 0) { brightcove.makeMetricsErrorCall(publisherID, brightcove.analyticsErrors.MAPPINGS_CALL_FAILURE); } else if (data && data.statusCode !== 200 && data.statusCode !== 404) { brightcove.makeMetricsErrorCall(publisherID, brightcove.analyticsErrors.UNEXPECTED_MAPPING_RESPONSE); }\n                brightcove.mappingFileData[publisherID] = data;\n                return callback(err, data);\n            });\n        }\n    };\n    brightcove.makeAjaxRequest = function(action, url, callback) {\n        function createXmlHTTPObject() {\n            var XMLHttpFactories = [function() { return new XDomainRequest() }, function() { return new XMLHttpRequest() }, function() { return new ActiveXObject('Msxml2.XMLHTTP') }, function() { return new ActiveXObject('Msxml3.XMLHTTP') }, function() { return new ActiveXObject('Microsoft.XMLHTTP') }];\n            var xmlhttp = false;\n            for (var i = 0; i < XMLHttpFactories.length; i++) {\n                try { xmlhttp = XMLHttpFactories[i](); } catch (e) { continue; }\n                break;\n            }\n            return xmlhttp;\n        }\n        var xhttp = createXmlHTTPObject();\n        if (!xhttp) { return callback(); }\n        try {\n            xhttp.open(action, url, true);\n            xhttp.timeout = 3000;\n            if (!window.XDomainRequest) { xhttp.onreadystatechange = function() { if (xhttp.readyState == 4) { return callback(null, { statusCode: xhttp.status, response: xhttp.responseText }); } }; } else {\n                xhttp.onload = function() { return callback(null, { statusCode: 200, response: xhttp.responseText }); };\n                xhttp.ontimeout = function() { return callback(null, { statusCode: 0 }); }\n                xhttp.onprogress = function() {};\n                xhttp.onerror = function() { return callback(null, { statusCode: 403 }); };\n            }\n            xhttp.send();\n        } catch (e) { callback(null, null); }\n    };\n    brightcove.base64 = function() {\n        var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'\n        var Arr = (typeof Uint8Array !== 'undefined') ? Uint8Array : Array\n        var PLUS = '+'.charCodeAt(0)\n        var SLASH = '/'.charCodeAt(0)\n        var NUMBER = '0'.charCodeAt(0)\n        var LOWER = 'a'.charCodeAt(0)\n        var UPPER = 'A'.charCodeAt(0)\n        var PLUS_URL_SAFE = '-'.charCodeAt(0)\n        var SLASH_URL_SAFE = '_'.charCodeAt(0)\n\n        function decode(elt) {\n            var code = elt.charCodeAt(0)\n            if (code === PLUS || code === PLUS_URL_SAFE) return 62\n            if (code === SLASH || code === SLASH_URL_SAFE) return 63\n            if (code < NUMBER) return -1\n            if (code < NUMBER + 10) return code - NUMBER + 26 + 26\n            if (code < UPPER + 26) return code - UPPER\n            if (code < LOWER + 26) return code - LOWER + 26\n        }\n\n        function b64ToByteArray(b64) {\n            var i, j, l, tmp, placeHolders, arr\n            if (b64.length % 4 > 0) { throw new Error('Invalid string. Length must be a multiple of 4') }\n            var len = b64.length\n            placeHolders = b64.charAt(len - 2) === '=' ? 2 : b64.charAt(len - 1) === '=' ? 1 : 0\n            arr = new Arr(b64.length * 3 / 4 - placeHolders)\n            l = placeHolders > 0 ? b64.length - 4 : b64.length\n            var L = 0\n\n            function push(v) { arr[L++] = v }\n            for (i = 0, j = 0; i < l; i += 4, j += 3) {\n                tmp = (decode(b64.charAt(i)) << 18) | (decode(b64.charAt(i + 1)) << 12) | (decode(b64.charAt(i + 2)) << 6) | decode(b64.charAt(i + 3))\n                push((tmp & 0xFF0000) >> 16)\n                push((tmp & 0xFF00) >> 8)\n                push(tmp & 0xFF)\n            }\n            if (placeHolders === 2) {\n                tmp = (decode(b64.charAt(i)) << 2) | (decode(b64.charAt(i + 1)) >> 4)\n                push(tmp & 0xFF)\n            } else if (placeHolders === 1) {\n                tmp = (decode(b64.charAt(i)) << 10) | (decode(b64.charAt(i + 1)) << 4) | (decode(b64.charAt(i + 2)) >> 2)\n                push((tmp >> 8) & 0xFF)\n                push(tmp & 0xFF)\n            }\n            return arr\n        }\n        return { toByteArray: b64ToByteArray }\n    };\n    brightcove.forceRefID = function(experience) {\n        var videoID = experience.params.videoID;\n        var videoPlayer = experience.params['@videoPlayer'];\n        var playlistID = experience.params['@videoList'];\n        var lineupID = experience.params.lineupID;\n        var playlistTabs = experience.params['@playlistTabs'];\n        var playlistCombo = experience.params['@playlistCombo'];\n        var playlistVideoFeatured = experience.params['@videoList.featured'];\n        var playlistTabsFeatured = experience.params['@playlistTabs.featured'];\n        var playlistComboFeatured = experience.params['@playlistCombo.featured'];\n        var playlistArray;\n        var playlistJoined;\n        if (playlistTabs) { playlistArray = playlistTabs.split(','); } else if (playlistCombo) { playlistArray = playlistCombo.split(','); }\n        if (playlistArray) {\n            for (var i = 0; i < playlistArray.length; i++) { if (playlistArray[i].indexOf('ref:') < 0) { playlistArray[i] = 'ref:' + playlistArray[i]; } }\n            playlistJoined = playlistArray.join(',');\n        }\n        if (playlistTabs) { experience.params['@playlistTabs'] = playlistJoined; } else if (playlistCombo) { experience.params['@playlistCombo'] = playlistJoined; }\n        if (playlistID && playlistID.indexOf('ref:') < 0) { experience.params['@videoList'] = 'ref:' + playlistID; }\n        if (lineupID && lineupID.indexOf('ref:') < 0) { experience.params.lineupID = 'ref:' + lineupID; }\n        if (playlistVideoFeatured && playlistVideoFeatured.indexOf('ref:') < 0) { experience.params['@videoList.featured'] = 'ref:' + playlistVideoFeatured; }\n        if (playlistTabsFeatured && playlistTabsFeatured.indexOf('ref:') < 0) { experience.params['@playlistTabs.featured'] = 'ref:' + playlistTabsFeatured; }\n        if (playlistComboFeatured && playlistComboFeatured.indexOf('ref:') < 0) { experience.params['@playlistCombo.featured'] = 'ref:' + playlistComboFeatured; }\n        if (videoID && videoID.indexOf('ref:') < 0) { experience.params.videoID = 'ref:' + videoID; }\n        if (videoPlayer && videoPlayer.indexOf('ref:') < 0) { experience.params['@videoPlayer'] = 'ref:' + videoPlayer; }\n        return experience;\n    };\n    brightcove.getBCPlayerIframe = function(experience, accountID, playerID, embedID) {\n        var iframeSource = brightcove.performCdnUrl['production'] + accountID + '/' + playerID + '_' + embedID + '/index.html?directedMigration=true&';\n        var videoID = experience.params['@videoPlayer'] || experience.params.videoID;\n        var playlistID = experience.params['@videoList'] || experience.params.lineupID;\n        var playlistTabs = experience.params['@playlistTabs'];\n        var playlistCombo = experience.params['@playlistCombo'];\n        var playlistArray;\n        var playlistVideoID = experience.params['@videoList.featured'] || experience.params.videoID;\n        if (playlistTabs) { playlistArray = playlistTabs.split(','); } else if (playlistCombo) { playlistArray = playlistCombo.split(','); }\n        if (experience.params['@playlistTabs.featured']) { playlistID = experience.params['@playlistTabs.featured']; } else if (experience.params['@playlistCombo.featured']) { playlistID = experience.params['@playlistCombo.featured']; } else if (playlistArray && playlistArray[0]) { playlistID = playlistArray[0]; }\n        if (playlistID && (isNaN(playlistID) && playlistID.indexOf('ref:') < 0)) { playlistID = 'ref:' + playlistID; }\n        if (playlistID) { iframeSource += 'playlistId=' + playlistID + '&'; } else if (videoID && (!isNaN(videoID) || videoID.indexOf('ref:') >= 0)) { iframeSource += 'videoId=' + videoID + '&'; } else if (videoID) { iframeSource += 'videoId=ref:' + videoID + '&'; }\n        if (playlistID && playlistVideoID) {\n            if (playlistVideoID && (isNaN(playlistVideoID) && playlistVideoID.indexOf('ref:') < 0)) { playlistVideoID = 'ref:' + playlistVideoID; }\n            iframeSource += 'playlistVideoId=' + playlistVideoID + '&';\n        }\n        if (experience.params.language && experience.params.language === 'jp') { iframeSource += 'language=ja&'; } else if (experience.params.language) { iframeSource += 'language=' + experience.params.language + '&'; }\n        if (experience.params.autoStart && experience.params.autoStart != 'false') { iframeSource += 'autoplay=' + experience.params.autoStart + '&'; }\n        return iframeSource;\n    };\n    if (/KHTML/i.test(navigator.userAgent)) { var checkLoad = setInterval(function() { if (/loaded|complete/.test(document.readyState)) { clearInterval(checkLoad);\n                brightcove.createExperiencesPostLoad(); } }, 70);\n        document.addEventListener('load', brightcove.createExperiencesPostLoad, false); }\n    if (typeof document.addEventListener != 'undefined') { document.addEventListener('DOMContentLoaded', brightcove.createExperiencesPostLoad, false);\n        document.addEventListener('load', brightcove.createExperiencesPostLoad, false);\n        window.addEventListener(\"message\", brightcove.respondToMessages, false); } else if (typeof window.attachEvent != 'undefined') { window.attachEvent('onload', brightcove.createExperiencesPostLoad); } else { alert(brightcove.i18n.BROWSER_TOO_OLD); }\n}\nbrightcove.json_parse = (function() {\n    \"use strict\";\n    var state, stack, container, key, value, escapes = { '\\\\': '\\\\', '\"': '\"', '/': '/', 't': '\\t', 'n': '\\n', 'r': '\\r', 'f': '\\f', 'b': '\\b' },\n        string = { go: function() { state = 'ok'; }, firstokey: function() { key = value;\n                state = 'colon'; }, okey: function() { key = value;\n                state = 'colon'; }, ovalue: function() { state = 'ocomma'; }, firstavalue: function() { state = 'acomma'; }, avalue: function() { state = 'acomma'; } },\n        number = { go: function() { state = 'ok'; }, ovalue: function() { state = 'ocomma'; }, firstavalue: function() { state = 'acomma'; }, avalue: function() { state = 'acomma'; } },\n        action = {\n            '{': { go: function() { stack.push({ state: 'ok' });\n                    container = {};\n                    state = 'firstokey'; }, ovalue: function() { stack.push({ container: container, state: 'ocomma', key: key });\n                    container = {};\n                    state = 'firstokey'; }, firstavalue: function() { stack.push({ container: container, state: 'acomma' });\n                    container = {};\n                    state = 'firstokey'; }, avalue: function() { stack.push({ container: container, state: 'acomma' });\n                    container = {};\n                    state = 'firstokey'; } },\n            '}': { firstokey: function() { var pop = stack.pop();\n                    value = container;\n                    container = pop.container;\n                    key = pop.key;\n                    state = pop.state; }, ocomma: function() { var pop = stack.pop();\n                    container[key] = value;\n                    value = container;\n                    container = pop.container;\n                    key = pop.key;\n                    state = pop.state; } },\n            '[': { go: function() { stack.push({ state: 'ok' });\n                    container = [];\n                    state = 'firstavalue'; }, ovalue: function() { stack.push({ container: container, state: 'ocomma', key: key });\n                    container = [];\n                    state = 'firstavalue'; }, firstavalue: function() { stack.push({ container: container, state: 'acomma' });\n                    container = [];\n                    state = 'firstavalue'; }, avalue: function() { stack.push({ container: container, state: 'acomma' });\n                    container = [];\n                    state = 'firstavalue'; } },\n            ']': { firstavalue: function() { var pop = stack.pop();\n                    value = container;\n                    container = pop.container;\n                    key = pop.key;\n                    state = pop.state; }, acomma: function() { var pop = stack.pop();\n                    container.push(value);\n                    value = container;\n                    container = pop.container;\n                    key = pop.key;\n                    state = pop.state; } },\n            ':': {\n                colon: function() {\n                    if (Object.hasOwnProperty.call(container, key)) { throw new SyntaxError('Duplicate key \"' + key + '\"'); }\n                    state = 'ovalue';\n                }\n            },\n            ',': { ocomma: function() { container[key] = value;\n                    state = 'okey'; }, acomma: function() { container.push(value);\n                    state = 'avalue'; } },\n            'true': { go: function() { value = true;\n                    state = 'ok'; }, ovalue: function() { value = true;\n                    state = 'ocomma'; }, firstavalue: function() { value = true;\n                    state = 'acomma'; }, avalue: function() { value = true;\n                    state = 'acomma'; } },\n            'false': { go: function() { value = false;\n                    state = 'ok'; }, ovalue: function() { value = false;\n                    state = 'ocomma'; }, firstavalue: function() { value = false;\n                    state = 'acomma'; }, avalue: function() { value = false;\n                    state = 'acomma'; } },\n            'null': { go: function() { value = null;\n                    state = 'ok'; }, ovalue: function() { value = null;\n                    state = 'ocomma'; }, firstavalue: function() { value = null;\n                    state = 'acomma'; }, avalue: function() { value = null;\n                    state = 'acomma'; } }\n        };\n\n    function debackslashify(text) { return text.replace(/\\\\(?:u(.{4})|([^u]))/g, function(a, b, c) { return b ? String.fromCharCode(parseInt(b, 16)) : escapes[c]; }); }\n    return function(source, reviver) {\n        var r, tx = /^[\\x20\\t\\n\\r]*(?:([,:\\[\\]{}]|true|false|null)|(-?\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?)|\"((?:[^\\r\\n\\t\\\\\\\"]|\\\\(?:[\"\\\\\\/trnfb]|u[0-9a-fA-F]{4}))*)\")/;\n        state = 'go';\n        stack = [];\n        try {\n            for (;;) {\n                r = tx.exec(source);\n                if (!r) { break; }\n                if (r[1]) { action[r[1]][state](); } else if (r[2]) { value = +r[2];\n                    number[state](); } else { value = debackslashify(r[3]);\n                    string[state](); }\n                source = source.slice(r[0].length);\n            }\n        } catch (e) { state = e; }\n        if (state !== 'ok' || (/[^\\x20\\t\\n\\r]/).test(source)) { throw state instanceof SyntaxError ? state : new SyntaxError('JSON'); }\n        return typeof reviver === 'function' ? (function walk(holder, key) {\n            var k, v, value = holder[key];\n            if (value && typeof value === 'object') { for (k in value) { if (Object.prototype.hasOwnProperty.call(value, k)) { v = walk(value, k); if (v !== undefined) { value[k] = v; } else { delete value[k]; } } } }\n            return reviver.call(holder, key, value);\n        }({ '': value }, '')) : value;\n    };\n}());",
+			"settings":
+			{
+				"buffer_size": 62336,
+				"line_ending": "Windows",
+				"name": "if (brightcove == undefined) { var brightcove = {}"
 			}
 		}
 	],
@@ -225,10 +348,14 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Projects/stuffs/node-binance-trader-master"
+		"/D/Projects/stuffs/autotrader-bot",
+		"/D/Projects/stuffs/autotrader-bot/indicators"
 	],
 	"file_history":
 	[
+		"/D/Projects/stuffs/autotrader-bot/indicators/support.js",
+		"/D/Projects/stuffs/autotrader-bot/ichi_cloud.js",
+		"/D/Projects/stuffs/autotrader-bot/indicators/ichimoku.js",
 		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Pages/Vehicle/CategoryCenter/KBB.Page.Vehicle.CategoryCenter.js",
 		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/Scripts/Common/KBB.Page.Events.js",
 		"/D/Projects/KBB/kbbweb-trident/KBB.Trident.Web/obj/Release/Package/PackageTmp/Styles/OOCss/partials/buyers-hub/_buyer-hub-compare.scss",
@@ -310,6 +437,7 @@
 		"height": 104.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -317,6 +445,40 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console.log",
+			"pair_data",
+			"calculate_ticks_data",
+			"/ 60",
+			"calculate_ticks_data",
+			"create_pair_data",
+			"intervals",
+			"async",
+			"mute",
+			"Object.assign",
+			"addEventListener",
+			"bot",
+			"async",
+			"handleIchimokuSignal",
+			"calculateIchimoku",
+			"shouldBuy",
+			"calculateIchimoku",
+			"createIchimokuElements",
+			"calculatePrevGainLoss",
+			"handleIchimokuSignal",
+			"wait_time",
+			"'BUY'",
+			"BUY",
+			"getFilteredResistences",
+			"getResistences",
+			"trackHourlyPrice",
+			"get_candleSticks_for_BTC_pairs",
+			" console.log",
+			"console.log",
+			"support",
+			"Support",
+			"get_candleSticks_for_BTC_pairs",
+			"var ",
+			"supports",
 			"calculateRSI",
 			"console.log",
 			"createPairData"
@@ -327,6 +489,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"resistence",
+			"Resistence",
+			"let",
+			"resistences"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -342,33 +508,250 @@
 			[
 				{
 					"buffer": 0,
-					"file": "ichi_cloud.js",
+					"file": "pump_detector.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12425,
+						"buffer_size": 7938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10191,
-								10191
+								4894,
+								4894
 							]
 						],
 						"settings":
 						{
-							"SL.38.region_keys":
+							"SL.64.region_keys":
 							[
 							],
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4097.0,
+						"translation.y": 2100.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5805,
+								5806
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4340.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								817,
+								830
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 560.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ichi_cloud.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.65.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "indicators/ovb.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"SL.17.region_keys":
+							[
+							],
+							"SL.21.region_keys":
+							[
+							],
+							"SL.58.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "indicators/resistence.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								830,
+								830
+							]
+						],
+						"settings":
+						{
+							"SL.18.region_keys":
+							[
+							],
+							"SL.59.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "indicators/rsi.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.70.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 700.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 62336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58811,
+								58811
+							]
+						],
+						"settings":
+						{
+							"auto_name": "if (brightcove == undefined) { var brightcove = {}",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3647.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
